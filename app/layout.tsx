@@ -1,12 +1,31 @@
 import type { Metadata, Viewport } from 'next'
+import localFont from 'next/font/local'
 import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { profile } from '@/lib/resume-data'
+import { withBasePath } from '@/lib/site'
 import './globals.css'
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+})
+
+const quetine = localFont({
+  src: [
+    {
+      path: '../public/fonts/quetine/Quetine.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/quetine/Quetine.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-quetine',
   display: 'swap',
 })
 
@@ -91,22 +110,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.ico',
+        url: withBasePath('/favicon.ico'),
       },
       {
-        url: '/icon-light-32x32.png',
+        url: withBasePath('/icon-light-32x32.png'),
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: withBasePath('/icon-dark-32x32.png'),
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: withBasePath('/icon.svg'),
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: withBasePath('/apple-icon.png'),
   },
 }
 
@@ -117,7 +136,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${poppins.className} ${quetine.variable} antialiased`}>
         {children}
         <Analytics />
       </body>

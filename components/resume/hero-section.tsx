@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Linkedin, Mail } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
 import { profile, profileLinks } from "@/lib/resume-data"
+import { withBasePath } from "@/lib/site"
 
 export function HeroSection() {
   const t = useTranslations()
@@ -41,13 +42,13 @@ export function HeroSection() {
               <Mail className="h-4 w-4" />
               {t.hero.email}
             </Link>
-            <Link
-              href="/cv/miriam-darwish-cv.pdf"
+            <a
+              href={withBasePath("/cv/miriam-darwish-cv.pdf")}
               target="_blank"
               className="inline-flex items-center rounded-full bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-transform hover:-translate-y-0.5"
             >
               {t.hero.downloadCV}
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -56,7 +57,7 @@ export function HeroSection() {
         <div className="text-center">
           <div className="relative mx-auto mb-6 h-56 w-56 sm:h-64 sm:w-64 lg:h-80 lg:w-80">
             <Image
-              src="/images/miriam-profile.jpg"
+              src={withBasePath("/images/miriam-profile.jpg")}
               alt={`${profile.name} - ${t.hero.role}`}
               fill
               className="rounded-full object-cover"

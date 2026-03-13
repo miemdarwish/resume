@@ -11,6 +11,9 @@ const nextConfig = {
         assetPrefix: `/${repoName}/`,
       }
     : {}),
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGitHubPages ? `/${repoName}` : "",
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

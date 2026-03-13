@@ -2,6 +2,7 @@
 
 import { BarChart3, Briefcase, Coins, FolderKanban, Shield, Users } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
+import { withBasePath } from "@/lib/site"
 
 const expertiseIcons = [FolderKanban, Shield, Users, Coins, Briefcase, BarChart3] as const
 
@@ -37,7 +38,7 @@ export function ServicesSection({ currentPage = 2 }: ServicesSectionProps) {
 
             <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <a
-                href="/cv/miriam-darwish-cv.pdf"
+                href={withBasePath("/cv/miriam-darwish-cv.pdf")}
                 target="_blank"
                 className="rounded-full bg-primary px-6 py-3 text-center font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >

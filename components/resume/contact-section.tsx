@@ -27,17 +27,25 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
     message: "",
   })
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    const submittedForm = e.currentTarget
+    const submittedValues = new FormData(submittedForm)
+    const payload = {
+      name: String(submittedValues.get("name") || "").trim(),
+      email: String(submittedValues.get("email") || "").trim(),
+      subject: String(submittedValues.get("subject") || "").trim(),
+      message: String(submittedValues.get("message") || "").trim(),
+    }
 
     if (isStaticSite) {
-      const subject = encodeURIComponent(formData.subject)
+      const subject = encodeURIComponent(payload.subject)
       const body = encodeURIComponent(
         [
-          `Name: ${formData.name}`,
-          `Email: ${formData.email}`,
+          `Name: ${payload.name}`,
+          `Email: ${payload.email}`,
           "",
-          formData.message,
+          payload.message,
         ].join("\n"),
       )
 
@@ -57,7 +65,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       })
 
       const data = (await response.json()) as { ok?: boolean; error?: string }
@@ -70,6 +78,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
         type: "success",
         message: t.contact.form.success,
       })
+      submittedForm.reset()
       setFormData({ name: "", email: "", subject: "", message: "" })
     } catch (error) {
       const message = error instanceof Error ? error.message : t.contact.form.error
@@ -138,6 +147,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               <div>
                 <input
                   type="text"
+                  name="name"
                   placeholder={t.contact.form.name}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -148,6 +158,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               <div>
                 <input
                   type="email"
+                  name="email"
                   placeholder={t.contact.form.email}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -158,6 +169,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               <div>
                 <input
                   type="text"
+                  name="subject"
                   placeholder={t.contact.form.subject}
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -167,6 +179,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               </div>
               <div>
                 <textarea
+                  name="message"
                   placeholder={t.contact.form.message}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
