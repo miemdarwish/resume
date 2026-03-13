@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { useTranslations } from "@/lib/i18n/context"
-import { experiences, profile } from "@/lib/resume-data"
 import { Timeline, TimelineItem } from "@/components/ui/timeline"
 import { cn } from "@/lib/utils"
 
@@ -23,7 +22,7 @@ export function ExperienceSection({ currentPage = 4 }: ExperienceSectionProps) {
             <h2 className="mb-12 text-3xl font-bold text-primary">{t.experience.title}</h2>
 
             <Timeline size="md">
-              {experiences.map((exp, index) => {
+              {t.experience.items.map((exp, index) => {
                 const isSelected = selectedIndex === index
                 const isHovered = hoveredIndex === index
                 const isFilled = isSelected || isHovered
@@ -35,7 +34,7 @@ export function ExperienceSection({ currentPage = 4 }: ExperienceSectionProps) {
                     iconsize="sm"
                     tone={isFilled ? "active" : "muted"}
                     showLeadingConnector={index > 0}
-                    showConnector={index < experiences.length - 1}
+                    showConnector={index < t.experience.items.length - 1}
                     className="cursor-pointer"
                     contentClassName={cn(
                       "rounded-3xl border p-5 transition-colors sm:p-6",
@@ -68,7 +67,7 @@ export function ExperienceSection({ currentPage = 4 }: ExperienceSectionProps) {
           <div className="lg:col-span-1">
             <h2 className="mb-6 text-3xl font-bold text-primary">{t.experience.coverLetter}</h2>
             <div className="rounded-3xl border border-border/60 bg-card/40 p-6 sm:p-8">
-              {profile.coverLetter.map((paragraph, index) => (
+              {t.experience.summaryParagraphs.map((paragraph, index) => (
                 <p
                   key={paragraph}
                   className={index === 0 ? "mb-6 text-base leading-relaxed text-foreground/80 sm:text-lg" : "mb-6 leading-relaxed text-muted-foreground last:mb-0"}

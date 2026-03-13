@@ -60,7 +60,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
                   </div>
                   <div className="min-w-0">
                     <span className="block text-xs uppercase tracking-widest text-sidebar-foreground/70">{t.sidebar.role}</span>
-                    <p className="font-medium text-sidebar-foreground">{profile.role}</p>
+                    <p className="font-medium text-sidebar-foreground">{t.hero.role}</p>
                   </div>
                 </div>
                 <div className="min-w-0 flex items-start gap-3">
@@ -164,7 +164,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5" />
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-sidebar-foreground/70">Address</span>
+                  <span className="text-xs uppercase tracking-widest text-sidebar-foreground/70">{t.contact.address}</span>
                   <p className="font-medium text-sidebar-foreground">{profile.location}</p>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
               <div className="min-w-0 flex items-start gap-3">
                 <Linkedin className="h-5 w-5" />
                 <div className="min-w-0">
-                  <span className="text-xs uppercase tracking-widest text-sidebar-foreground/70">LinkedIn</span>
+                  <span className="text-xs uppercase tracking-widest text-sidebar-foreground/70">{t.contact.linkedin}</span>
                   <a
                     href={profile.linkedinUrl}
                     target="_blank"

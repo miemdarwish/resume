@@ -23,35 +23,132 @@ const translations = {
         },
         hero: {
             greeting: "Hello. My name is",
+            role: "PMO Consultant",
+            yearsOfExperience: "6+ Years of Experience",
+            tagline: "PMO | Project Coordinator | 6+ Years of Experience",
             summary: "A results-driven PMO Consultant with over 6 years of experience supporting complex, global projects in fast-paced environments. Skilled in risk management, governance, milestone tracking, and stakeholder coordination.",
             downloadCV: "Download CV",
-            viewPortfolio: "View Portfolio"
+            linkedIn: "LinkedIn",
+            email: "Email"
         },
         services: {
             title: "Areas of Expertise",
-            description: "A focused PMO and project coordination profile covering project support, risk handling, stakeholder communication, resource planning, and governance.",
-            projectManagement: {
-                title: "Project Management",
-                description: "End-to-end project coordination, timeline management, and delivery oversight to support strong project outcomes."
-            },
-            riskManagement: {
-                title: "Risk Management",
-                description: "Proactive risk identification, assessment, and mitigation support to protect delivery progress."
-            },
-            stakeholderComm: {
-                title: "Stakeholder Communication",
-                description: "Clear and effective communication to keep project teams and stakeholders informed and aligned."
-            },
-            governance: {
-                title: "Governance",
-                description: "Structured governance support, reporting, and documentation practices for consistent delivery."
-            }
+            intro: "A results-driven PMO profile focused on structured project support, clear stakeholder communication, and dependable delivery coordination.",
+            body1: "The CV centers on hands-on PMO support, strong reporting discipline, cross-functional coordination, risk visibility, and governance follow-through across international project environments.",
+            body2: "Core tools include Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P, and ServiceNow.",
+            ctaDownload: "Download CV",
+            ctaExperience: "View Experience",
+            cards: [
+                {
+                    title: "Project & Portfolio Management",
+                    description: "Supporting end-to-end coordination, milestone tracking, and delivery follow-through across complex project portfolios."
+                },
+                {
+                    title: "Risk & Issue Management",
+                    description: "Identifying risks early, managing dependencies, and helping teams remove blockers before they affect delivery."
+                },
+                {
+                    title: "Stakeholder Communication",
+                    description: "Creating clear updates, facilitating cross-functional communication, and keeping sponsors and teams aligned."
+                },
+                {
+                    title: "Financial Operations & Budget Control",
+                    description: "Bringing structure to project administration, reporting, and budget-related coordination work."
+                },
+                {
+                    title: "Resource Planning & Allocation",
+                    description: "Aligning project demand with available capacity to improve efficiency and delivery predictability."
+                },
+                {
+                    title: "Governance & Compliance",
+                    description: "Standardizing documentation and governance practices to support consistent, compliant project execution."
+                }
+            ]
         },
         experience: {
             title: "Experience",
             coverLetter: "Summary",
-            coverLetterText: "Results-driven Project Management Officer with over 6 years of experience supporting complex, global projects in fast-paced environments.",
-            present: "Present"
+            summaryParagraphs: [
+                "Results-driven Project Management Officer with over 6 years of experience supporting complex, global projects in fast-paced environments.",
+                "Skilled in risk management, governance, milestone tracking, and stakeholder coordination, with a strong record of keeping teams aligned and stakeholders informed.",
+                "Known for enabling project success through structured support, clear communication, proactive problem solving, and well-maintained project documentation."
+            ],
+            items: [
+                {
+                    year: "2019",
+                    period: "2019 - Present",
+                    title: "Project Management Officer",
+                    company: "Atradius",
+                    highlights: [
+                        "Facilitated cross-functional collaboration with project managers, ensuring on-time and on-budget project delivery.",
+                        "Optimized resource planning to align project needs with available capacity, enhancing efficiency.",
+                        "Mitigated risks and managed dependencies, driving project progress and ensuring seamless execution.",
+                        "Standardized governance frameworks ensuring compliance with project management processes.",
+                        "Created and shared clear reports to keep stakeholders informed on project updates.",
+                        "Organized and maintained project documentation to ensure consistency and accessibility."
+                    ]
+                },
+                {
+                    year: "2018",
+                    period: "2018 - 2019",
+                    title: "Project Coordinator",
+                    company: "Tata Steel",
+                    highlights: [
+                        "Designed and coordinated training programs for team members, improving skills and overall performance.",
+                        "Managed project tasks and dependencies across multiple initiatives, ensuring smooth execution and on-time delivery.",
+                        "Facilitated cross-department communication, acting as the key liaison for Sales, Marketing, and Supply Chain teams.",
+                        "Identified and mitigated risks, reduced project delays, and kept stakeholders informed."
+                    ]
+                },
+                {
+                    year: "2017",
+                    period: "2017 - 2018",
+                    title: "Team Leader",
+                    company: "Hotel Specials",
+                    highlights: [
+                        "Implemented quality improvement initiatives, reducing error rates and increasing customer satisfaction scores.",
+                        "Coached and mentored a team of 10+ advisors, improving performance and team efficiency.",
+                        "Collaborated with hotel management and internal departments to streamline communication and resolve escalated issues effectively."
+                    ]
+                },
+                {
+                    year: "2015",
+                    period: "2015 - 2018",
+                    title: "Flight Attendant",
+                    company: "Menzies Schiphol Airport",
+                    highlights: [
+                        "Assisted passengers with check-in, boarding, and luggage handling while ensuring compliance with airline procedures."
+                    ]
+                },
+                {
+                    year: "2012",
+                    period: "2012 - 2015",
+                    title: "Commercial Customer Advisor",
+                    company: "Hotel Specials",
+                    highlights: [
+                        "Managed reservations and administrative tasks, ensuring customer satisfaction and achieving a positive feedback rate.",
+                        "Resolved customer complaints and served as the central communication point for queries."
+                    ]
+                },
+                {
+                    year: "2010",
+                    period: "2010 - 2012",
+                    title: "Management Assistant",
+                    company: "Tata Steel",
+                    highlights: [
+                        "Provided general departmental support by managing agendas, coordinating meetings, handling incoming calls, and welcoming visitors."
+                    ]
+                },
+                {
+                    year: "2009",
+                    period: "2009 - 2010",
+                    title: "Call Center Agent",
+                    company: "2Contact",
+                    highlights: [
+                        "Conducted outbound sales calls to generate revenue through product sales."
+                    ]
+                }
+            ]
         },
         skills: {
             title: "Skills",
@@ -60,6 +157,76 @@ const translations = {
             languages: "Languages",
             certifications: "Certifications",
             education: "Education",
+            internships: "Internships",
+            circular: [
+                {
+                    name: "Project Management",
+                    percentage: 90
+                },
+                {
+                    name: "Risk Management",
+                    percentage: 85
+                },
+                {
+                    name: "Stakeholder Communication",
+                    percentage: 88
+                },
+                {
+                    name: "Governance",
+                    percentage: 82
+                }
+            ],
+            bars: [
+                {
+                    name: "MS Project & Jira",
+                    percentage: 85
+                },
+                {
+                    name: "Microsoft Office",
+                    percentage: 95
+                },
+                {
+                    name: "Confluence & SharePoint",
+                    percentage: 80
+                },
+                {
+                    name: "Oracle P2P & ServiceNow",
+                    percentage: 75
+                }
+            ],
+            technologyGroups: [
+                {
+                    category: "Microsoft Office",
+                    tools: [
+                        "Excel",
+                        "Outlook",
+                        "Word",
+                        "Power Point",
+                        "Visio"
+                    ]
+                },
+                {
+                    category: "Collaboration",
+                    tools: [
+                        "Confluence",
+                        "SharePoint"
+                    ]
+                },
+                {
+                    category: "Project Management",
+                    tools: [
+                        "MS Project",
+                        "Jira"
+                    ]
+                },
+                {
+                    category: "Enterprise",
+                    tools: [
+                        "Oracle P2P",
+                        "ServiceNow"
+                    ]
+                }
+            ],
             personalSkillsList: [
                 "Clear Communication Skills",
                 "Organisational Skills",
@@ -67,6 +234,26 @@ const translations = {
                 "Proactive Problem Solving",
                 "Attention to Detail",
                 "Collaboration & Teamwork"
+            ],
+            languagesList: [
+                "Dutch",
+                "English"
+            ],
+            certificationsList: [
+                {
+                    name: "IPMA (PMO)",
+                    issuer: "International Project Management Association"
+                }
+            ],
+            educationItem: {
+                degree: "Bachelor of Tourism Management",
+                school: "InHolland in Amsterdam, Netherlands",
+                year: "2018"
+            },
+            internshipsList: [
+                "Customer Service Representative, Admin/Marketing Barrio-Life | 2015",
+                "Management Assistant, TicketSpy | 2010",
+                "Personal Assistant, Acupunctuur Kliniek | 2009"
             ]
         },
         contact: {
@@ -74,7 +261,8 @@ const translations = {
             description: "Open to discussing PMO, project coordination, and stakeholder support opportunities across international teams and fast-paced delivery environments.",
             address: "Address",
             email: "Email",
-            website: "Website",
+            phone: "Phone",
+            linkedin: "LinkedIn",
             form: {
                 name: "Name",
                 email: "Email",
@@ -107,35 +295,132 @@ const translations = {
         },
         hero: {
             greeting: "Hallo. Mijn naam is",
+            role: "PMO Consultant",
+            yearsOfExperience: "6+ Jaar Ervaring",
+            tagline: "PMO | Project Coordinator | 6+ Jaar Ervaring",
             summary: "Een resultaatgerichte PMO Consultant met meer dan 6 jaar ervaring in het ondersteunen van complexe, wereldwijde projecten in snelle omgevingen. Sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie.",
             downloadCV: "Download CV",
-            viewPortfolio: "Bekijk Portfolio"
+            linkedIn: "LinkedIn",
+            email: "E-mail"
         },
         services: {
             title: "Expertisegebieden",
-            description: "Een gericht PMO- en projectcoordinatieprofiel met nadruk op projectondersteuning, risicobeheersing, stakeholdercommunicatie, resourceplanning en governance.",
-            projectManagement: {
-                title: "Projectmanagement",
-                description: "End-to-end projectcoordinatie, tijdlijnbeheer en leveringstoezicht om sterke projectresultaten te ondersteunen."
-            },
-            riskManagement: {
-                title: "Risicobeheer",
-                description: "Proactieve risico-identificatie, beoordeling en mitigatie om de voortgang van projecten te beschermen."
-            },
-            stakeholderComm: {
-                title: "Stakeholdercommunicatie",
-                description: "Duidelijke en effectieve communicatie om teams en stakeholders geinformeerd en op een lijn te houden."
-            },
-            governance: {
-                title: "Governance",
-                description: "Gestructureerde ondersteuning voor governance, rapportage en documentatie voor consistente levering."
-            }
+            intro: "Een resultaatgericht PMO-profiel met focus op gestructureerde projectondersteuning, duidelijke stakeholdercommunicatie en betrouwbare coordinatie van leveringen.",
+            body1: "Het CV legt de nadruk op praktische PMO-ondersteuning, sterke rapportagediscipline, afstemming tussen teams, risicoinzicht en consequente governance in internationale projectomgevingen.",
+            body2: "Belangrijke tools zijn Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P en ServiceNow.",
+            ctaDownload: "Download CV",
+            ctaExperience: "Bekijk Ervaring",
+            cards: [
+                {
+                    title: "Project- en Portfoliomanagement",
+                    description: "Ondersteuning van end-to-end coordinatie, mijlpaalbewaking en leveringsopvolging binnen complexe projectportfolio's."
+                },
+                {
+                    title: "Risico- en Issuemanagement",
+                    description: "Risico's vroeg signaleren, afhankelijkheden beheren en teams helpen blokkades weg te nemen voordat ze de levering raken."
+                },
+                {
+                    title: "Stakeholdercommunicatie",
+                    description: "Heldere updates maken, samenwerking tussen teams faciliteren en stakeholders aligned houden."
+                },
+                {
+                    title: "Financiele Operaties en Budgetbewaking",
+                    description: "Structuur brengen in projectadministratie, rapportages en budgetgerelateerde coordinatie."
+                },
+                {
+                    title: "Resourceplanning en Allocatie",
+                    description: "Projectvraag afstemmen op beschikbare capaciteit om efficientie en voorspelbaarheid te verbeteren."
+                },
+                {
+                    title: "Governance en Compliance",
+                    description: "Documentatie- en governancepraktijken standaardiseren voor consistente en conforme projectuitvoering."
+                }
+            ]
         },
         experience: {
             title: "Ervaring",
             coverLetter: "Samenvatting",
-            coverLetterText: "Resultaatgerichte Project Management Officer met meer dan 6 jaar ervaring in het ondersteunen van complexe, wereldwijde projecten in snelle omgevingen.",
-            present: "Heden"
+            summaryParagraphs: [
+                "Resultaatgerichte Project Management Officer met meer dan 6 jaar ervaring in het ondersteunen van complexe, wereldwijde projecten in snelle omgevingen.",
+                "Sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie, met een sterke staat van dienst in het aligned houden van teams en stakeholders.",
+                "Bekend om het mogelijk maken van projectsucces door gestructureerde ondersteuning, duidelijke communicatie, proactief probleemoplossen en goed beheerde projectdocumentatie."
+            ],
+            items: [
+                {
+                    year: "2019",
+                    period: "2019 - Heden",
+                    title: "Project Management Officer",
+                    company: "Atradius",
+                    highlights: [
+                        "Faciliteerde samenwerking tussen projectmanagers en teams, met focus op tijdige en budgetbewuste levering.",
+                        "Optimaliseerde resourceplanning om projectbehoeften beter af te stemmen op beschikbare capaciteit.",
+                        "Beheerde risico's en afhankelijkheden om de voortgang soepel te laten verlopen.",
+                        "Standaardiseerde governance-raamwerken om naleving van projectprocessen te ondersteunen.",
+                        "Maakte en deelde duidelijke rapportages om stakeholders op de hoogte te houden.",
+                        "Organiseerde en beheerde projectdocumentatie voor consistentie en toegankelijkheid."
+                    ]
+                },
+                {
+                    year: "2018",
+                    period: "2018 - 2019",
+                    title: "Project Coordinator",
+                    company: "Tata Steel",
+                    highlights: [
+                        "Ontwierp en coordineerde trainingsprogramma's voor teamleden om vaardigheden en prestaties te verbeteren.",
+                        "Beheerde projecttaken en afhankelijkheden over meerdere initiatieven heen.",
+                        "Fungeerde als belangrijke schakel tussen Sales, Marketing en Supply Chain.",
+                        "Signaleerde en beperkte risico's, verminderde vertragingen en hield stakeholders geinformeerd."
+                    ]
+                },
+                {
+                    year: "2017",
+                    period: "2017 - 2018",
+                    title: "Team Leader",
+                    company: "Hotel Specials",
+                    highlights: [
+                        "Voerde kwaliteitsverbeteringen door die fouten verminderden en klanttevredenheid verhoogden.",
+                        "Coachte en begeleidde een team van meer dan 10 adviseurs.",
+                        "Werkte samen met hotelmanagement en interne teams om communicatie te stroomlijnen en escalaties op te lossen."
+                    ]
+                },
+                {
+                    year: "2015",
+                    period: "2015 - 2018",
+                    title: "Flight Attendant",
+                    company: "Menzies Schiphol Airport",
+                    highlights: [
+                        "Ondersteunde passagiers bij check-in, boarding en bagageafhandeling volgens luchtvaartprocedures."
+                    ]
+                },
+                {
+                    year: "2012",
+                    period: "2012 - 2015",
+                    title: "Commercial Customer Advisor",
+                    company: "Hotel Specials",
+                    highlights: [
+                        "Beheerde reserveringen en administratieve taken met focus op klanttevredenheid en positieve feedback.",
+                        "Loste klachten op en was centraal aanspreekpunt voor vragen."
+                    ]
+                },
+                {
+                    year: "2010",
+                    period: "2010 - 2012",
+                    title: "Management Assistant",
+                    company: "Tata Steel",
+                    highlights: [
+                        "Bood algemene afdelingsondersteuning door agenda's, vergaderingen, telefoongesprekken en ontvangst van bezoekers te coordineren."
+                    ]
+                },
+                {
+                    year: "2009",
+                    period: "2009 - 2010",
+                    title: "Call Center Agent",
+                    company: "2Contact",
+                    highlights: [
+                        "Voerde outbound verkoopgesprekken om omzet te genereren via productverkoop."
+                    ]
+                }
+            ]
         },
         skills: {
             title: "Vaardigheden",
@@ -144,6 +429,76 @@ const translations = {
             languages: "Talen",
             certifications: "Certificeringen",
             education: "Opleiding",
+            internships: "Stages",
+            circular: [
+                {
+                    name: "Projectmanagement",
+                    percentage: 90
+                },
+                {
+                    name: "Risicobeheer",
+                    percentage: 85
+                },
+                {
+                    name: "Stakeholdercommunicatie",
+                    percentage: 88
+                },
+                {
+                    name: "Governance",
+                    percentage: 82
+                }
+            ],
+            bars: [
+                {
+                    name: "MS Project & Jira",
+                    percentage: 85
+                },
+                {
+                    name: "Microsoft Office",
+                    percentage: 95
+                },
+                {
+                    name: "Confluence & SharePoint",
+                    percentage: 80
+                },
+                {
+                    name: "Oracle P2P & ServiceNow",
+                    percentage: 75
+                }
+            ],
+            technologyGroups: [
+                {
+                    category: "Microsoft Office",
+                    tools: [
+                        "Excel",
+                        "Outlook",
+                        "Word",
+                        "Power Point",
+                        "Visio"
+                    ]
+                },
+                {
+                    category: "Samenwerking",
+                    tools: [
+                        "Confluence",
+                        "SharePoint"
+                    ]
+                },
+                {
+                    category: "Projectmanagement",
+                    tools: [
+                        "MS Project",
+                        "Jira"
+                    ]
+                },
+                {
+                    category: "Enterprise",
+                    tools: [
+                        "Oracle P2P",
+                        "ServiceNow"
+                    ]
+                }
+            ],
             personalSkillsList: [
                 "Duidelijke Communicatie",
                 "Organisatorische Vaardigheden",
@@ -151,6 +506,26 @@ const translations = {
                 "Proactief Probleemoplossend",
                 "Oog voor Detail",
                 "Samenwerking & Teamwork"
+            ],
+            languagesList: [
+                "Nederlands",
+                "Engels"
+            ],
+            certificationsList: [
+                {
+                    name: "IPMA (PMO)",
+                    issuer: "International Project Management Association"
+                }
+            ],
+            educationItem: {
+                degree: "Bachelor of Tourism Management",
+                school: "InHolland in Amsterdam, Nederland",
+                year: "2018"
+            },
+            internshipsList: [
+                "Customer Service Representative, Admin/Marketing Barrio-Life | 2015",
+                "Management Assistant, TicketSpy | 2010",
+                "Personal Assistant, Acupunctuur Kliniek | 2009"
             ]
         },
         contact: {
@@ -158,7 +533,8 @@ const translations = {
             description: "Open voor gesprekken over PMO-, projectcoordinatie- en stakeholder support-rollen binnen internationale teams en dynamische omgevingen.",
             address: "Adres",
             email: "E-mail",
-            website: "Website",
+            phone: "Telefoon",
+            linkedin: "LinkedIn",
             form: {
                 name: "Naam",
                 email: "E-mail",
@@ -191,35 +567,132 @@ const translations = {
         },
         hero: {
             greeting: "Hej. Mit navn er",
+            role: "PMO-konsulent",
+            yearsOfExperience: "6+ Ars Erfaring",
+            tagline: "PMO | Projektkoordinator | 6+ Ars Erfaring",
             summary: "En resultatorienteret PMO-konsulent med over 6 ars erfaring i at stotte komplekse, globale projekter i hurtige miljoer. Staerk inden for risikostyring, governance, milepaelsopfolgning og interessentkommunikation.",
             downloadCV: "Download CV",
-            viewPortfolio: "Se Portfolio"
+            linkedIn: "LinkedIn",
+            email: "E-mail"
         },
         services: {
             title: "Kompetenceomrader",
-            description: "En fokuseret PMO- og projektkoordinatorprofil med vaegt pa projektstotte, risikohandtering, interessentkommunikation, ressourceplanlaegning og governance.",
-            projectManagement: {
-                title: "Projektledelse",
-                description: "End-to-end projektkoordinering, tidsstyring og leveringstilsyn for at understotte staerke projektresultater."
-            },
-            riskManagement: {
-                title: "Risikostyring",
-                description: "Proaktiv risikoidentifikation, vurdering og afbodning for at beskytte projektfremdrift."
-            },
-            stakeholderComm: {
-                title: "Interessentkommunikation",
-                description: "Klar og effektiv kommunikation for at holde teams og interessenter informerede og pa linje."
-            },
-            governance: {
-                title: "Governance",
-                description: "Struktureret governance-, rapporterings- og dokumentationsstotte for konsistent levering."
-            }
+            intro: "En resultatorienteret PMO-profil med fokus pa struktureret projektstotte, klar interessentkommunikation og paalidelig leverancekoordinering.",
+            body1: "CV'et fremhaever praktisk PMO-stotte, staerk rapporteringsdisciplin, koordinering pa tvaers af teams, risikotransparens og konsekvent governance i internationale projektmiljoer.",
+            body2: "Centrale vaerktojer omfatter Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P og ServiceNow.",
+            ctaDownload: "Download CV",
+            ctaExperience: "Se Erfaring",
+            cards: [
+                {
+                    title: "Projekt- og Portefoljestyring",
+                    description: "Stotte til end-to-end koordinering, milepaelsopfolgning og leveranceopfolgning pa tvaers af komplekse projektportefoljer."
+                },
+                {
+                    title: "Risiko- og Issuehaandtering",
+                    description: "Identificerer risici tidligt, styrer afhængigheder og hjaelper teams med at fjerne blokeringer for levering."
+                },
+                {
+                    title: "Interessentkommunikation",
+                    description: "Udarbejder klare opdateringer, faciliterer samarbejde pa tvaers af teams og holder interessenter aligned."
+                },
+                {
+                    title: "Finansielle Operationer og Budgetkontrol",
+                    description: "Skaber struktur i projektadministration, rapportering og budgetrelateret koordinering."
+                },
+                {
+                    title: "Ressourceplanlaegning og Allokering",
+                    description: "Afstemmer projektbehov med tilgaengelig kapacitet for at forbedre effektivitet og forudsigelighed."
+                },
+                {
+                    title: "Governance og Compliance",
+                    description: "Standardiserer dokumentations- og governancepraksis for konsekvent og compliant projektudfoerelse."
+                }
+            ]
         },
         experience: {
             title: "Erfaring",
             coverLetter: "Profil",
-            coverLetterText: "Resultatorienteret Project Management Officer med over 6 ars erfaring i at stotte komplekse, globale projekter i hurtige miljoer.",
-            present: "Nu"
+            summaryParagraphs: [
+                "Resultatorienteret Project Management Officer med over 6 ars erfaring i at stotte komplekse, globale projekter i hurtige miljoer.",
+                "Staerk inden for risikostyring, governance, milepaelsopfolgning og interessentkommunikation med dokumenteret evne til at holde teams og interessenter aligned.",
+                "Kendt for at skabe projektsucces gennem struktureret stotte, klar kommunikation, proaktiv problemlosning og velorganiseret projektdokumentation."
+            ],
+            items: [
+                {
+                    year: "2019",
+                    period: "2019 - Nu",
+                    title: "Project Management Officer",
+                    company: "Atradius",
+                    highlights: [
+                        "Faciliterede tværfunktionelt samarbejde med projektledere med fokus pa levering til tiden og inden for budget.",
+                        "Optimerede ressourceplanlaegning for bedre match mellem behov og kapacitet.",
+                        "Haandterede risici og afhaengigheder for at sikre stabil projektfremdrift.",
+                        "Standardiserede governance-rammer for at understotte efterlevelse af projektprocesser.",
+                        "Udarbejdede og delte klare rapporter for at holde interessenter opdateret.",
+                        "Organiserede og vedligeholdt projektdokumentation for konsistens og tilgaengelighed."
+                    ]
+                },
+                {
+                    year: "2018",
+                    period: "2018 - 2019",
+                    title: "Project Coordinator",
+                    company: "Tata Steel",
+                    highlights: [
+                        "Designede og koordinerede traeningsprogrammer for teammedlemmer for at forbedre kompetencer og performance.",
+                        "Styrede projektopgaver og afhaengigheder pa tværs af flere initiativer.",
+                        "Fungerede som vigtig bindeled mellem Sales, Marketing og Supply Chain.",
+                        "Identificerede og reducerede risici, begraensede forsinkelser og holdt interessenter orienteret."
+                    ]
+                },
+                {
+                    year: "2017",
+                    period: "2017 - 2018",
+                    title: "Team Leader",
+                    company: "Hotel Specials",
+                    highlights: [
+                        "Implementerede kvalitetsforbedringer, som reducerede fejl og forbedrede kundetilfredshed.",
+                        "Coachede og mentorstottede et team pa mere end 10 raadgivere.",
+                        "Samarbejdede med hotelledelse og interne afdelinger for at effektivisere kommunikation og lose eskalationer."
+                    ]
+                },
+                {
+                    year: "2015",
+                    period: "2015 - 2018",
+                    title: "Flight Attendant",
+                    company: "Menzies Schiphol Airport",
+                    highlights: [
+                        "Hjalp passagerer med check-in, boarding og bagagehaandtering i overensstemmelse med luftfartsprocedurer."
+                    ]
+                },
+                {
+                    year: "2012",
+                    period: "2012 - 2015",
+                    title: "Commercial Customer Advisor",
+                    company: "Hotel Specials",
+                    highlights: [
+                        "Haandterede reservationer og administrative opgaver med fokus pa kundetilfredshed og positiv feedback.",
+                        "Loste klager og fungerede som centralt kontaktpunkt for foresporgsler."
+                    ]
+                },
+                {
+                    year: "2010",
+                    period: "2010 - 2012",
+                    title: "Management Assistant",
+                    company: "Tata Steel",
+                    highlights: [
+                        "Ydede generel afdelingsstotte ved at koordinere agendaer, moder, telefonopkald og modtagelse af besoegende."
+                    ]
+                },
+                {
+                    year: "2009",
+                    period: "2009 - 2010",
+                    title: "Call Center Agent",
+                    company: "2Contact",
+                    highlights: [
+                        "Gennemforte outbound salgsopkald for at skabe omsaetning gennem produktsalg."
+                    ]
+                }
+            ]
         },
         skills: {
             title: "Faerdigheder",
@@ -228,6 +701,76 @@ const translations = {
             languages: "Sprog",
             certifications: "Certificeringer",
             education: "Uddannelse",
+            internships: "Praktik",
+            circular: [
+                {
+                    name: "Projektledelse",
+                    percentage: 90
+                },
+                {
+                    name: "Risikostyring",
+                    percentage: 85
+                },
+                {
+                    name: "Interessentkommunikation",
+                    percentage: 88
+                },
+                {
+                    name: "Governance",
+                    percentage: 82
+                }
+            ],
+            bars: [
+                {
+                    name: "MS Project & Jira",
+                    percentage: 85
+                },
+                {
+                    name: "Microsoft Office",
+                    percentage: 95
+                },
+                {
+                    name: "Confluence & SharePoint",
+                    percentage: 80
+                },
+                {
+                    name: "Oracle P2P & ServiceNow",
+                    percentage: 75
+                }
+            ],
+            technologyGroups: [
+                {
+                    category: "Microsoft Office",
+                    tools: [
+                        "Excel",
+                        "Outlook",
+                        "Word",
+                        "Power Point",
+                        "Visio"
+                    ]
+                },
+                {
+                    category: "Samarbejde",
+                    tools: [
+                        "Confluence",
+                        "SharePoint"
+                    ]
+                },
+                {
+                    category: "Projektledelse",
+                    tools: [
+                        "MS Project",
+                        "Jira"
+                    ]
+                },
+                {
+                    category: "Enterprise",
+                    tools: [
+                        "Oracle P2P",
+                        "ServiceNow"
+                    ]
+                }
+            ],
             personalSkillsList: [
                 "Klar Kommunikation",
                 "Organisatoriske Faerdigheder",
@@ -235,6 +778,26 @@ const translations = {
                 "Proaktiv Problemlosning",
                 "Opmarksomhed pa Detaljer",
                 "Samarbejde & Teamwork"
+            ],
+            languagesList: [
+                "Hollandsk",
+                "Engelsk"
+            ],
+            certificationsList: [
+                {
+                    name: "IPMA (PMO)",
+                    issuer: "International Project Management Association"
+                }
+            ],
+            educationItem: {
+                degree: "Bachelor of Tourism Management",
+                school: "InHolland i Amsterdam, Holland",
+                year: "2018"
+            },
+            internshipsList: [
+                "Customer Service Representative, Admin/Marketing Barrio-Life | 2015",
+                "Management Assistant, TicketSpy | 2010",
+                "Personal Assistant, Acupunctuur Kliniek | 2009"
             ]
         },
         contact: {
@@ -242,7 +805,8 @@ const translations = {
             description: "Aben for dialog om PMO-, projektkoordinations- og stakeholder support-muligheder pa tvaers af internationale teams og hurtige leverancemiljoer.",
             address: "Adresse",
             email: "E-mail",
-            website: "Hjemmeside",
+            phone: "Telefon",
+            linkedin: "LinkedIn",
             form: {
                 name: "Navn",
                 email: "E-mail",
@@ -280,19 +844,34 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$translations$
 ;
 ;
 const I18nContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(undefined);
+const STORAGE_KEY = "resume-locale";
 function I18nProvider({ children }) {
     const [locale, setLocale] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("en");
-    const value = {
-        locale,
-        setLocale,
-        t: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$translations$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["translations"][locale]
-    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const storedLocale = window.localStorage.getItem(STORAGE_KEY);
+        if (storedLocale === "en" || storedLocale === "nl" || storedLocale === "da") {
+            setLocale(storedLocale);
+        }
+    }, []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        window.localStorage.setItem(STORAGE_KEY, locale);
+        document.documentElement.lang = locale;
+    }, [
+        locale
+    ]);
+    const value = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>({
+            locale,
+            setLocale,
+            t: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$translations$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["translations"][locale]
+        }), [
+        locale
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(I18nContext.Provider, {
         value: value,
         children: children
     }, void 0, false, {
         fileName: "[project]/lib/i18n/context.tsx",
-        lineNumber: 23,
+        lineNumber: 39,
         columnNumber: 10
     }, this);
 }
@@ -838,7 +1417,7 @@ function Sidebar({ activeSection, currentPage, onNavClick }) {
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 className: "font-medium text-sidebar-foreground",
-                                                                children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].role
+                                                                children: t.hero.role
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/resume/sidebar.tsx",
                                                                 lineNumber: 63,
@@ -1206,7 +1785,7 @@ function Sidebar({ activeSection, currentPage, onNavClick }) {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-xs uppercase tracking-widest text-sidebar-foreground/70",
-                                                        children: "Address"
+                                                        children: t.contact.address
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/resume/sidebar.tsx",
                                                         lineNumber: 167,
@@ -1330,7 +1909,7 @@ function Sidebar({ activeSection, currentPage, onNavClick }) {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-xs uppercase tracking-widest text-sidebar-foreground/70",
-                                                        children: "LinkedIn"
+                                                        children: t.contact.linkedin
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/resume/sidebar.tsx",
                                                         lineNumber: 192,
@@ -1482,7 +2061,7 @@ function HeroSection() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "inline-flex rounded-full border border-primary/20 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-primary/80 shadow-sm",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].tagline
+                            children: t.hero.tagline
                         }, void 0, false, {
                             fileName: "[project]/components/resume/hero-section.tsx",
                             lineNumber: 22,
@@ -1490,7 +2069,7 @@ function HeroSection() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "mt-6 text-sm leading-relaxed text-muted-foreground sm:text-base",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].summary
+                            children: t.hero.summary
                         }, void 0, false, {
                             fileName: "[project]/components/resume/hero-section.tsx",
                             lineNumber: 25,
@@ -1512,7 +2091,7 @@ function HeroSection() {
                                             lineNumber: 34,
                                             columnNumber: 15
                                         }, this),
-                                        "LinkedIn"
+                                        t.hero.linkedIn
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/resume/hero-section.tsx",
@@ -1520,7 +2099,7 @@ function HeroSection() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    href: `mailto:${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].email}`,
+                                    href: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profileLinks"].email,
                                     className: "flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
@@ -1530,7 +2109,7 @@ function HeroSection() {
                                             lineNumber: 41,
                                             columnNumber: 15
                                         }, this),
-                                        "Email"
+                                        t.hero.email
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/resume/hero-section.tsx",
@@ -1573,7 +2152,7 @@ function HeroSection() {
                             className: "relative mx-auto mb-6 h-56 w-56 sm:h-64 sm:w-64 lg:h-80 lg:w-80",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 src: "/images/miriam-profile.jpg",
-                                alt: "Miriam Darwish - PMO Consultant",
+                                alt: `${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].name} - ${t.hero.role}`,
                                 fill: true,
                                 className: "rounded-full object-cover",
                                 priority: true
@@ -1589,7 +2168,7 @@ function HeroSection() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-sm uppercase tracking-[0.25em] text-foreground/60",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].role
+                            children: t.hero.role
                         }, void 0, false, {
                             fileName: "[project]/components/resume/hero-section.tsx",
                             lineNumber: 66,
@@ -1597,7 +2176,7 @@ function HeroSection() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "mt-2 text-xs text-foreground/40",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].yearsOfExperience
+                            children: t.hero.yearsOfExperience
                         }, void 0, false, {
                             fileName: "[project]/components/resume/hero-section.tsx",
                             lineNumber: 67,
@@ -1637,9 +2216,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield.js [app-ssr] (ecmascript) <export default as Shield>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.js [app-ssr] (ecmascript) <export default as Users>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/i18n/context.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/resume-data.ts [app-ssr] (ecmascript)");
 "use client";
-;
 ;
 ;
 ;
@@ -1664,7 +2241,7 @@ function ServicesSection({ currentPage = 2 }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid gap-5 sm:grid-cols-2 sm:gap-6 lg:col-span-2",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["areasOfExpertise"].map((service, index)=>{
+                            children: t.services.cards.map((service, index)=>{
                                 const Icon = expertiseIcons[index];
                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "rounded-3xl border border-border/60 bg-secondary/50 p-6 transition-colors hover:bg-secondary sm:p-8",
@@ -1673,7 +2250,7 @@ function ServicesSection({ currentPage = 2 }) {
                                             className: "mb-6 h-12 w-12 text-primary stroke-1"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/services-section.tsx",
-                                            lineNumber: 25,
+                                            lineNumber: 24,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1681,7 +2258,7 @@ function ServicesSection({ currentPage = 2 }) {
                                             children: service.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/services-section.tsx",
-                                            lineNumber: 26,
+                                            lineNumber: 25,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1689,19 +2266,19 @@ function ServicesSection({ currentPage = 2 }) {
                                             children: service.description
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/services-section.tsx",
-                                            lineNumber: 27,
+                                            lineNumber: 26,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, service.title, true, {
                                     fileName: "[project]/components/resume/services-section.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 23,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/components/resume/services-section.tsx",
-                            lineNumber: 20,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1712,31 +2289,31 @@ function ServicesSection({ currentPage = 2 }) {
                                     children: t.services.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/services-section.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 33,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mb-6 text-base leading-relaxed text-foreground/80 sm:text-lg",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].summary
+                                    children: t.services.intro
+                                }, void 0, false, {
+                                    fileName: "[project]/components/resume/services-section.tsx",
+                                    lineNumber: 34,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "mb-6 leading-relaxed text-muted-foreground",
+                                    children: t.services.body1
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/services-section.tsx",
                                     lineNumber: 35,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "mb-6 leading-relaxed text-muted-foreground",
-                                    children: "The PDF CV centers the profile around hands-on PMO support, structured coordination, strong reporting discipline, and proactive governance across international project environments."
+                                    className: "mb-8 leading-relaxed text-muted-foreground",
+                                    children: t.services.body2
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/services-section.tsx",
                                     lineNumber: 36,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "mb-8 leading-relaxed text-muted-foreground",
-                                    children: "Core tools include Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P, and ServiceNow."
-                                }, void 0, false, {
-                                    fileName: "[project]/components/resume/services-section.tsx",
-                                    lineNumber: 39,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1746,42 +2323,42 @@ function ServicesSection({ currentPage = 2 }) {
                                             href: "/cv/miriam-darwish-cv.pdf",
                                             target: "_blank",
                                             className: "rounded-full bg-primary px-6 py-3 text-center font-medium text-primary-foreground transition-colors hover:bg-primary/90",
-                                            children: "Download CV"
+                                            children: t.services.ctaDownload
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/services-section.tsx",
-                                            lineNumber: 44,
+                                            lineNumber: 39,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#resume",
                                             className: "rounded-full border border-primary px-6 py-3 text-center font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground",
-                                            children: "View Experience"
+                                            children: t.services.ctaExperience
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/services-section.tsx",
-                                            lineNumber: 51,
+                                            lineNumber: 46,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/resume/services-section.tsx",
-                                    lineNumber: 43,
+                                    lineNumber: 38,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/resume/services-section.tsx",
-                            lineNumber: 33,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/services-section.tsx",
-                    lineNumber: 19,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/resume/services-section.tsx",
-                lineNumber: 18,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1791,18 +2368,18 @@ function ServicesSection({ currentPage = 2 }) {
                     children: String(currentPage).padStart(2, "0")
                 }, void 0, false, {
                     fileName: "[project]/components/resume/services-section.tsx",
-                    lineNumber: 63,
+                    lineNumber: 58,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/resume/services-section.tsx",
-                lineNumber: 62,
+                lineNumber: 57,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/resume/services-section.tsx",
-        lineNumber: 17,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
@@ -2128,11 +2705,9 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/i18n/context.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/resume-data.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$timeline$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/timeline.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/utils.ts [app-ssr] (ecmascript)");
 "use client";
-;
 ;
 ;
 ;
@@ -2159,12 +2734,12 @@ function ExperienceSection({ currentPage = 4 }) {
                                     children: t.experience.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                    lineNumber: 23,
+                                    lineNumber: 22,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$timeline$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Timeline"], {
                                     size: "md",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["experiences"].map((exp, index)=>{
+                                    children: t.experience.items.map((exp, index)=>{
                                         const isSelected = selectedIndex === index;
                                         const isHovered = hoveredIndex === index;
                                         const isFilled = isSelected || isHovered;
@@ -2173,7 +2748,7 @@ function ExperienceSection({ currentPage = 4 }) {
                                             iconsize: "sm",
                                             tone: isFilled ? "active" : "muted",
                                             showLeadingConnector: index > 0,
-                                            showConnector: index < __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["experiences"].length - 1,
+                                            showConnector: index < t.experience.items.length - 1,
                                             className: "cursor-pointer",
                                             contentClassName: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("rounded-3xl border p-5 transition-colors sm:p-6", isFilled ? "border-primary/40 bg-card" : "border-border/60 bg-card/40"),
                                             timeClassName: isFilled ? "text-primary" : "text-primary/60",
@@ -2186,7 +2761,7 @@ function ExperienceSection({ currentPage = 4 }) {
                                                     children: exp.period
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                                    lineNumber: 49,
+                                                    lineNumber: 48,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2194,7 +2769,7 @@ function ExperienceSection({ currentPage = 4 }) {
                                                     children: exp.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                                    lineNumber: 50,
+                                                    lineNumber: 49,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2202,7 +2777,7 @@ function ExperienceSection({ currentPage = 4 }) {
                                                     children: exp.company
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                                    lineNumber: 53,
+                                                    lineNumber: 52,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2214,43 +2789,43 @@ function ExperienceSection({ currentPage = 4 }) {
                                                                     className: "mt-2 block h-1.5 w-1.5 flex-none rounded-full bg-primary/70"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                                                    lineNumber: 57,
+                                                                    lineNumber: 56,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: highlight
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                                                    lineNumber: 58,
+                                                                    lineNumber: 57,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, highlight, true, {
                                                             fileName: "[project]/components/resume/experience-section.tsx",
-                                                            lineNumber: 56,
+                                                            lineNumber: 55,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                                    lineNumber: 54,
+                                                    lineNumber: 53,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, `${exp.company}-${exp.period}`, true, {
                                             fileName: "[project]/components/resume/experience-section.tsx",
-                                            lineNumber: 32,
+                                            lineNumber: 31,
                                             columnNumber: 19
                                         }, this);
                                     })
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                    lineNumber: 25,
+                                    lineNumber: 24,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/resume/experience-section.tsx",
-                            lineNumber: 22,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2261,34 +2836,34 @@ function ExperienceSection({ currentPage = 4 }) {
                                     children: t.experience.coverLetter
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 68,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "rounded-3xl border border-border/60 bg-card/40 p-6 sm:p-8",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].coverLetter.map((paragraph, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    children: t.experience.summaryParagraphs.map((paragraph, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: index === 0 ? "mb-6 text-base leading-relaxed text-foreground/80 sm:text-lg" : "mb-6 leading-relaxed text-muted-foreground last:mb-0",
                                             children: paragraph
                                         }, paragraph, false, {
                                             fileName: "[project]/components/resume/experience-section.tsx",
-                                            lineNumber: 72,
+                                            lineNumber: 71,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/experience-section.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 69,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/resume/experience-section.tsx",
-                            lineNumber: 68,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/experience-section.tsx",
-                    lineNumber: 21,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2298,23 +2873,23 @@ function ExperienceSection({ currentPage = 4 }) {
                         children: String(currentPage).padStart(2, "0")
                     }, void 0, false, {
                         fileName: "[project]/components/resume/experience-section.tsx",
-                        lineNumber: 84,
+                        lineNumber: 83,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/resume/experience-section.tsx",
-                    lineNumber: 83,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/resume/experience-section.tsx",
-            lineNumber: 20,
+            lineNumber: 19,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/resume/experience-section.tsx",
-        lineNumber: 19,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -2340,9 +2915,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.js [app-ssr] (ecmascript) <export default as Users>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wrench$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Wrench$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/wrench.js [app-ssr] (ecmascript) <export default as Wrench>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/i18n/context.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/resume-data.ts [app-ssr] (ecmascript)");
 "use client";
-;
 ;
 ;
 ;
@@ -2351,7 +2924,11 @@ const groupIcons = {
     "Microsoft Office": __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$spreadsheet$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileSpreadsheet$3e$__["FileSpreadsheet"],
     Collaboration: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"],
     "Project Management": __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$folder$2d$kanban$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FolderKanban$3e$__["FolderKanban"],
-    Enterprise: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$server$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Server$3e$__["Server"]
+    Enterprise: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$server$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Server$3e$__["Server"],
+    Samenwerking: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"],
+    Projectmanagement: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$folder$2d$kanban$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FolderKanban$3e$__["FolderKanban"],
+    Projektledelse: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$folder$2d$kanban$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FolderKanban$3e$__["FolderKanban"],
+    Samarbejde: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"]
 };
 const toolIcons = {
     Excel: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$spreadsheet$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileSpreadsheet$3e$__["FileSpreadsheet"],
@@ -2413,7 +2990,7 @@ function CircularProgress({ percentage, name, isVisible }) {
                                 className: "text-muted"
                             }, void 0, false, {
                                 fileName: "[project]/components/resume/skills-section.tsx",
-                                lineNumber: 83,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -2429,13 +3006,13 @@ function CircularProgress({ percentage, name, isVisible }) {
                                 className: "text-primary transition-none"
                             }, void 0, false, {
                                 fileName: "[project]/components/resume/skills-section.tsx",
-                                lineNumber: 84,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/resume/skills-section.tsx",
-                        lineNumber: 82,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2448,18 +3025,18 @@ function CircularProgress({ percentage, name, isVisible }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 98,
+                            lineNumber: 92,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/resume/skills-section.tsx",
-                        lineNumber: 97,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/resume/skills-section.tsx",
-                lineNumber: 81,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2467,13 +3044,13 @@ function CircularProgress({ percentage, name, isVisible }) {
                 children: name
             }, void 0, false, {
                 fileName: "[project]/components/resume/skills-section.tsx",
-                lineNumber: 101,
+                lineNumber: 95,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/resume/skills-section.tsx",
-        lineNumber: 80,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 }
@@ -2512,7 +3089,7 @@ function ProgressBar({ percentage, name, isVisible }) {
                         children: name
                     }, void 0, false, {
                         fileName: "[project]/components/resume/skills-section.tsx",
-                        lineNumber: 135,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2523,13 +3100,13 @@ function ProgressBar({ percentage, name, isVisible }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/resume/skills-section.tsx",
-                        lineNumber: 136,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/resume/skills-section.tsx",
-                lineNumber: 134,
+                lineNumber: 128,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2541,18 +3118,18 @@ function ProgressBar({ percentage, name, isVisible }) {
                     }
                 }, void 0, false, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 139,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/resume/skills-section.tsx",
-                lineNumber: 138,
+                lineNumber: 132,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/resume/skills-section.tsx",
-        lineNumber: 133,
+        lineNumber: 127,
         columnNumber: 5
     }, this);
 }
@@ -2585,12 +3162,28 @@ function SkillsSection({ currentPage = 5 }) {
                     children: t.skills.title
                 }, void 0, false, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 174,
+                    lineNumber: 168,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mb-16 grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4",
-                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["circularSkills"].map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CircularProgress, {
+                    children: t.skills.circular.map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CircularProgress, {
+                            percentage: skill.percentage,
+                            name: skill.name,
+                            isVisible: isVisible
+                        }, skill.name, false, {
+                            fileName: "[project]/components/resume/skills-section.tsx",
+                            lineNumber: 172,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/components/resume/skills-section.tsx",
+                    lineNumber: 170,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mb-16 grid gap-x-12 gap-y-6 md:grid-cols-2",
+                    children: t.skills.bars.map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProgressBar, {
                             percentage: skill.percentage,
                             name: skill.name,
                             isVisible: isVisible
@@ -2605,22 +3198,6 @@ function SkillsSection({ currentPage = 5 }) {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mb-16 grid gap-x-12 gap-y-6 md:grid-cols-2",
-                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["barSkills"].map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProgressBar, {
-                            percentage: skill.percentage,
-                            name: skill.name,
-                            isVisible: isVisible
-                        }, skill.name, false, {
-                            fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 184,
-                            columnNumber: 13
-                        }, this))
-                }, void 0, false, {
-                    fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 182,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mb-16",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2628,13 +3205,13 @@ function SkillsSection({ currentPage = 5 }) {
                             children: t.skills.technologies
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 189,
+                            lineNumber: 183,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid gap-6 md:grid-cols-2",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["technologyGroups"].map((group)=>{
-                                const GroupIcon = groupIcons[group.category];
+                            children: t.skills.technologyGroups.map((group)=>{
+                                const GroupIcon = groupIcons[group.category] ?? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$server$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Server$3e$__["Server"];
                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "rounded-xl border border-border/50 bg-secondary/30 p-6",
                                     children: [
@@ -2647,12 +3224,12 @@ function SkillsSection({ currentPage = 5 }) {
                                                         className: "h-5 w-5 text-primary"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/resume/skills-section.tsx",
-                                                        lineNumber: 197,
+                                                        lineNumber: 191,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                                    lineNumber: 196,
+                                                    lineNumber: 190,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -2660,19 +3237,19 @@ function SkillsSection({ currentPage = 5 }) {
                                                     children: group.category
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                                    lineNumber: 199,
+                                                    lineNumber: 193,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/resume/skills-section.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 189,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex flex-wrap gap-2",
                                             children: group.tools.map((tool)=>{
-                                                const ToolIcon = toolIcons[tool];
+                                                const ToolIcon = toolIcons[tool] ?? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$server$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Server$3e$__["Server"];
                                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "flex items-center gap-2 rounded-lg bg-background/50 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-background hover:text-foreground",
                                                     children: [
@@ -2680,44 +3257,44 @@ function SkillsSection({ currentPage = 5 }) {
                                                             className: "h-4 w-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/skills-section.tsx",
-                                                            lineNumber: 209,
+                                                            lineNumber: 203,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: tool
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/skills-section.tsx",
-                                                            lineNumber: 210,
+                                                            lineNumber: 204,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, tool, true, {
                                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                                    lineNumber: 205,
+                                                    lineNumber: 199,
                                                     columnNumber: 25
                                                 }, this);
                                             })
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/skills-section.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 195,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, group.category, true, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 194,
+                                    lineNumber: 188,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 190,
+                            lineNumber: 184,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 188,
+                    lineNumber: 182,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2728,28 +3305,28 @@ function SkillsSection({ currentPage = 5 }) {
                             children: t.skills.personalSkills
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 222,
+                            lineNumber: 216,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid gap-4 md:grid-cols-3",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["personalSkills"].map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: t.skills.personalSkillsList.map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "rounded-lg bg-secondary/50 px-4 py-3 text-foreground/80",
                                     children: skill
                                 }, skill, false, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 219,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 223,
+                            lineNumber: 217,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 221,
+                    lineNumber: 215,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2760,28 +3337,28 @@ function SkillsSection({ currentPage = 5 }) {
                             children: t.skills.languages
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 233,
+                            lineNumber: 227,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-wrap gap-4",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["languages"].map((language)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            children: t.skills.languagesList.map((language)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "rounded-full bg-primary/20 px-6 py-2 font-medium text-primary",
                                     children: language
                                 }, language, false, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 236,
+                                    lineNumber: 230,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 234,
+                            lineNumber: 228,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 232,
+                    lineNumber: 226,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2792,12 +3369,12 @@ function SkillsSection({ currentPage = 5 }) {
                             children: t.skills.certifications
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 244,
+                            lineNumber: 238,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-wrap gap-4",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["certifications"].map((certification)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: t.skills.certificationsList.map((certification)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "inline-block rounded-lg bg-secondary/50 p-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2805,7 +3382,7 @@ function SkillsSection({ currentPage = 5 }) {
                                             children: certification.name
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/skills-section.tsx",
-                                            lineNumber: 248,
+                                            lineNumber: 242,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2813,24 +3390,24 @@ function SkillsSection({ currentPage = 5 }) {
                                             children: certification.issuer
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/skills-section.tsx",
-                                            lineNumber: 249,
+                                            lineNumber: 243,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, certification.name, true, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 247,
+                                    lineNumber: 241,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 245,
+                            lineNumber: 239,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 243,
+                    lineNumber: 237,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2841,7 +3418,7 @@ function SkillsSection({ currentPage = 5 }) {
                             children: t.skills.education
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 256,
+                            lineNumber: 250,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2849,38 +3426,38 @@ function SkillsSection({ currentPage = 5 }) {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "font-medium text-foreground",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["education"].degree
+                                    children: t.skills.educationItem.degree
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 258,
+                                    lineNumber: 252,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-sm text-primary",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["education"].school
+                                    children: t.skills.educationItem.school
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 259,
+                                    lineNumber: 253,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-sm text-muted-foreground",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["education"].year
+                                    children: t.skills.educationItem.year
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 254,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 257,
+                            lineNumber: 251,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 255,
+                    lineNumber: 249,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2888,31 +3465,31 @@ function SkillsSection({ currentPage = 5 }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             className: "mb-6 text-xl font-semibold text-primary",
-                            children: "Internships"
+                            children: t.skills.internships
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 265,
+                            lineNumber: 259,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid gap-4",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["internships"].map((internship)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: t.skills.internshipsList.map((internship)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "rounded-lg bg-secondary/50 px-4 py-4 text-foreground/80",
                                     children: internship
                                 }, internship, false, {
                                     fileName: "[project]/components/resume/skills-section.tsx",
-                                    lineNumber: 268,
+                                    lineNumber: 262,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/resume/skills-section.tsx",
-                            lineNumber: 266,
+                            lineNumber: 260,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 264,
+                    lineNumber: 258,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2922,23 +3499,23 @@ function SkillsSection({ currentPage = 5 }) {
                         children: String(currentPage).padStart(2, "0")
                     }, void 0, false, {
                         fileName: "[project]/components/resume/skills-section.tsx",
-                        lineNumber: 276,
+                        lineNumber: 270,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/resume/skills-section.tsx",
-                    lineNumber: 275,
+                    lineNumber: 269,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/resume/skills-section.tsx",
-            lineNumber: 173,
+            lineNumber: 167,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/resume/skills-section.tsx",
-        lineNumber: 172,
+        lineNumber: 166,
         columnNumber: 5
     }, this);
 }
@@ -2994,7 +3571,7 @@ function ContactSection({ currentPage = 6 }) {
             });
             const data = await response.json();
             if (!response.ok) {
-                throw new Error(data.error || "Unable to send your message right now.");
+                throw new Error(data.error || t.contact.form.error);
             }
             setSubmitState({
                 type: "success",
@@ -3037,7 +3614,7 @@ function ContactSection({ currentPage = 6 }) {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mb-8 text-base leading-relaxed text-foreground/80 sm:text-lg",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].contactIntro
+                                    children: t.contact.description
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/contact-section.tsx",
                                     lineNumber: 71,
@@ -3104,8 +3681,11 @@ function ContactSection({ currentPage = 6 }) {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-xs uppercase tracking-widest text-foreground/50",
-                                                            children: "Email:"
-                                                        }, void 0, false, {
+                                                            children: [
+                                                                t.contact.email,
+                                                                ":"
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
                                                             lineNumber: 84,
                                                             columnNumber: 19
@@ -3138,17 +3718,20 @@ function ContactSection({ currentPage = 6 }) {
                                                     className: "h-5 w-5 text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 94,
+                                                    lineNumber: 91,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-xs uppercase tracking-widest text-foreground/50",
-                                                            children: "Phone:"
-                                                        }, void 0, false, {
+                                                            children: [
+                                                                t.contact.phone,
+                                                                ":"
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 96,
+                                                            lineNumber: 93,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3157,19 +3740,19 @@ function ContactSection({ currentPage = 6 }) {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].phone
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 97,
+                                                            lineNumber: 94,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 95,
+                                                    lineNumber: 92,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 90,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3179,7 +3762,7 @@ function ContactSection({ currentPage = 6 }) {
                                                     className: "h-5 w-5 text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 106,
+                                                    lineNumber: 100,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3187,10 +3770,13 @@ function ContactSection({ currentPage = 6 }) {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-xs uppercase tracking-widest text-foreground/50",
-                                                            children: "LinkedIn:"
-                                                        }, void 0, false, {
+                                                            children: [
+                                                                t.contact.linkedin,
+                                                                ":"
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 108,
+                                                            lineNumber: 102,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3201,19 +3787,19 @@ function ContactSection({ currentPage = 6 }) {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["profile"].linkedinLabel
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 109,
+                                                            lineNumber: 103,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 101,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 105,
+                                            lineNumber: 99,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -3247,12 +3833,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 125,
+                                            lineNumber: 119,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 118,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3268,12 +3854,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 129,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 128,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3289,12 +3875,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 139,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 144,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3310,12 +3896,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full resize-none border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 155,
+                                            lineNumber: 149,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 154,
+                                        lineNumber: 148,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3325,7 +3911,7 @@ function ContactSection({ currentPage = 6 }) {
                                         children: isSubmitting ? t.contact.form.sending : t.contact.form.send
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 158,
                                         columnNumber: 15
                                     }, this),
                                     submitState.type !== "idle" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3333,18 +3919,18 @@ function ContactSection({ currentPage = 6 }) {
                                         children: submitState.message
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 166,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/resume/contact-section.tsx",
-                                lineNumber: 123,
+                                lineNumber: 117,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/resume/contact-section.tsx",
-                            lineNumber: 122,
+                            lineNumber: 116,
                             columnNumber: 11
                         }, this)
                     ]
@@ -3360,12 +3946,12 @@ function ContactSection({ currentPage = 6 }) {
                         children: String(currentPage).padStart(2, "0")
                     }, void 0, false, {
                         fileName: "[project]/components/resume/contact-section.tsx",
-                        lineNumber: 187,
+                        lineNumber: 181,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/resume/contact-section.tsx",
-                    lineNumber: 186,
+                    lineNumber: 180,
                     columnNumber: 9
                 }, this)
             ]

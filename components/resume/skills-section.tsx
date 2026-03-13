@@ -15,22 +15,16 @@ import {
   Wrench,
 } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
-import {
-  barSkills,
-  certifications,
-  circularSkills,
-  education,
-  internships,
-  languages,
-  personalSkills,
-  technologyGroups,
-} from "@/lib/resume-data"
 
 const groupIcons = {
   "Microsoft Office": FileSpreadsheet,
   Collaboration: Users,
   "Project Management": FolderKanban,
   Enterprise: Server,
+  Samenwerking: Users,
+  Projectmanagement: FolderKanban,
+  Projektledelse: FolderKanban,
+  Samarbejde: Users,
 } as const
 
 const toolIcons = {
@@ -174,13 +168,13 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
         <h2 className="mb-12 text-3xl font-bold text-primary">{t.skills.title}</h2>
 
         <div className="mb-16 grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
-          {circularSkills.map((skill) => (
+          {t.skills.circular.map((skill) => (
             <CircularProgress key={skill.name} percentage={skill.percentage} name={skill.name} isVisible={isVisible} />
           ))}
         </div>
 
         <div className="mb-16 grid gap-x-12 gap-y-6 md:grid-cols-2">
-          {barSkills.map((skill) => (
+          {t.skills.bars.map((skill) => (
             <ProgressBar key={skill.name} percentage={skill.percentage} name={skill.name} isVisible={isVisible} />
           ))}
         </div>
@@ -188,8 +182,8 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
         <div className="mb-16">
           <h3 className="mb-6 text-xl font-semibold text-primary">{t.skills.technologies}</h3>
           <div className="grid gap-6 md:grid-cols-2">
-            {technologyGroups.map((group) => {
-              const GroupIcon = groupIcons[group.category]
+            {t.skills.technologyGroups.map((group) => {
+              const GroupIcon = groupIcons[group.category as keyof typeof groupIcons] ?? Server
               return (
                 <div key={group.category} className="rounded-xl border border-border/50 bg-secondary/30 p-6">
                   <div className="mb-4 flex items-center gap-3">
@@ -200,7 +194,7 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {group.tools.map((tool) => {
-                      const ToolIcon = toolIcons[tool]
+                      const ToolIcon = toolIcons[tool as keyof typeof toolIcons] ?? Server
                       return (
                         <div
                           key={tool}
@@ -221,7 +215,7 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
         <div className="mb-12">
           <h3 className="mb-6 text-xl font-semibold text-primary">{t.skills.personalSkills}</h3>
           <div className="grid gap-4 md:grid-cols-3">
-            {personalSkills.map((skill) => (
+            {t.skills.personalSkillsList.map((skill) => (
               <div key={skill} className="rounded-lg bg-secondary/50 px-4 py-3 text-foreground/80">
                 {skill}
               </div>
@@ -232,7 +226,7 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
         <div className="mb-12">
           <h3 className="mb-6 text-xl font-semibold text-primary">{t.skills.languages}</h3>
           <div className="flex flex-wrap gap-4">
-            {languages.map((language) => (
+            {t.skills.languagesList.map((language) => (
               <span key={language} className="rounded-full bg-primary/20 px-6 py-2 font-medium text-primary">
                 {language}
               </span>
@@ -243,7 +237,7 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
         <div className="mb-12">
           <h3 className="mb-6 text-xl font-semibold text-primary">{t.skills.certifications}</h3>
           <div className="flex flex-wrap gap-4">
-            {certifications.map((certification) => (
+            {t.skills.certificationsList.map((certification) => (
               <div key={certification.name} className="inline-block rounded-lg bg-secondary/50 p-6">
                 <p className="font-medium text-foreground">{certification.name}</p>
                 <p className="text-sm text-muted-foreground">{certification.issuer}</p>
@@ -255,16 +249,16 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
         <div className="mb-12">
           <h3 className="mb-6 text-xl font-semibold text-primary">{t.skills.education}</h3>
           <div className="rounded-lg bg-secondary/50 p-6">
-            <p className="font-medium text-foreground">{education.degree}</p>
-            <p className="text-sm text-primary">{education.school}</p>
-            <p className="text-sm text-muted-foreground">{education.year}</p>
+            <p className="font-medium text-foreground">{t.skills.educationItem.degree}</p>
+            <p className="text-sm text-primary">{t.skills.educationItem.school}</p>
+            <p className="text-sm text-muted-foreground">{t.skills.educationItem.year}</p>
           </div>
         </div>
 
         <div className="mb-12">
-          <h3 className="mb-6 text-xl font-semibold text-primary">Internships</h3>
+          <h3 className="mb-6 text-xl font-semibold text-primary">{t.skills.internships}</h3>
           <div className="grid gap-4">
-            {internships.map((internship) => (
+            {t.skills.internshipsList.map((internship) => (
               <div key={internship} className="rounded-lg bg-secondary/50 px-4 py-4 text-foreground/80">
                 {internship}
               </div>

@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Linkedin, Mail } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
-import { profile } from "@/lib/resume-data"
+import { profile, profileLinks } from "@/lib/resume-data"
 
 export function HeroSection() {
   const t = useTranslations()
@@ -20,9 +20,9 @@ export function HeroSection() {
             Darwish
           </h1>
           <p className="inline-flex rounded-full border border-primary/20 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-primary/80 shadow-sm">
-            {profile.tagline}
+            {t.hero.tagline}
           </p>
-          <p className="mt-6 text-sm leading-relaxed text-muted-foreground sm:text-base">{profile.summary}</p>
+          <p className="mt-6 text-sm leading-relaxed text-muted-foreground sm:text-base">{t.hero.summary}</p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-8">
             <Link
@@ -32,14 +32,14 @@ export function HeroSection() {
               className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary"
             >
               <Linkedin className="h-4 w-4" />
-              LinkedIn
+              {t.hero.linkedIn}
             </Link>
             <Link
-              href={`mailto:${profile.email}`}
+              href={profileLinks.email}
               className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary"
             >
               <Mail className="h-4 w-4" />
-              Email
+              {t.hero.email}
             </Link>
             <Link
               href="/cv/miriam-darwish-cv.pdf"
@@ -57,14 +57,14 @@ export function HeroSection() {
           <div className="relative mx-auto mb-6 h-56 w-56 sm:h-64 sm:w-64 lg:h-80 lg:w-80">
             <Image
               src="/images/miriam-profile.jpg"
-              alt="Miriam Darwish - PMO Consultant"
+              alt={`${profile.name} - ${t.hero.role}`}
               fill
               className="rounded-full object-cover"
               priority
             />
           </div>
-          <p className="text-sm uppercase tracking-[0.25em] text-foreground/60">{profile.role}</p>
-          <p className="mt-2 text-xs text-foreground/40">{profile.yearsOfExperience}</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-foreground/60">{t.hero.role}</p>
+          <p className="mt-2 text-xs text-foreground/40">{t.hero.yearsOfExperience}</p>
         </div>
       </div>
     </section>

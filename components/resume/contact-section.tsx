@@ -43,7 +43,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
       const data = (await response.json()) as { ok?: boolean; error?: string }
 
       if (!response.ok) {
-        throw new Error(data.error || "Unable to send your message right now.")
+        throw new Error(data.error || t.contact.form.error)
       }
 
       setSubmitState({
@@ -68,7 +68,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <h2 className="mb-6 text-3xl font-bold text-primary">{t.contact.title}</h2>
-            <p className="mb-8 text-base leading-relaxed text-foreground/80 sm:text-lg">{profile.contactIntro}</p>
+            <p className="mb-8 text-base leading-relaxed text-foreground/80 sm:text-lg">{t.contact.description}</p>
 
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -81,11 +81,8 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               <div className="flex items-start gap-4">
                 <Mail className="h-5 w-5 text-primary" />
                 <div className="min-w-0">
-                  <span className="text-xs uppercase tracking-widest text-foreground/50">Email:</span>
-                  <a
-                    href={profileLinks.email}
-                    className="block break-all text-foreground transition-colors hover:text-primary"
-                  >
+                  <span className="text-xs uppercase tracking-widest text-foreground/50">{t.contact.email}:</span>
+                  <a href={profileLinks.email} className="block break-all text-foreground transition-colors hover:text-primary">
                     {profile.email}
                   </a>
                 </div>
@@ -93,11 +90,8 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               <div className="flex items-start gap-4">
                 <Phone className="h-5 w-5 text-primary" />
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-foreground/50">Phone:</span>
-                  <a
-                    href={profileLinks.phone}
-                    className="block text-foreground transition-colors hover:text-primary"
-                  >
+                  <span className="text-xs uppercase tracking-widest text-foreground/50">{t.contact.phone}:</span>
+                  <a href={profileLinks.phone} className="block text-foreground transition-colors hover:text-primary">
                     {profile.phone}
                   </a>
                 </div>
@@ -105,7 +99,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               <div className="flex items-start gap-4">
                 <Linkedin className="h-5 w-5 text-primary" />
                 <div className="min-w-0">
-                  <span className="text-xs uppercase tracking-widest text-foreground/50">LinkedIn:</span>
+                  <span className="text-xs uppercase tracking-widest text-foreground/50">{t.contact.linkedin}:</span>
                   <a
                     href={profile.linkedinUrl}
                     target="_blank"
