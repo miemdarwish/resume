@@ -271,6 +271,7 @@ const translations = {
                 send: "Send",
                 sending: "Sending...",
                 success: "Thank you for your message. Miriam will get back to you as soon as possible.",
+                mailClient: "Your email app is opening with your message prefilled.",
                 error: "Your message could not be sent right now. Please try again in a moment."
             }
         },
@@ -543,6 +544,7 @@ const translations = {
                 send: "Verzenden",
                 sending: "Verzenden...",
                 success: "Bedankt voor je bericht. Miriam neemt zo snel mogelijk contact met je op.",
+                mailClient: "Je e-mailapp wordt geopend met je bericht alvast ingevuld.",
                 error: "Je bericht kon nu niet worden verzonden. Probeer het zo meteen opnieuw."
             }
         },
@@ -815,6 +817,7 @@ const translations = {
                 send: "Send",
                 sending: "Sender...",
                 success: "Tak for din besked. Miriam vender tilbage til dig hurtigst muligt.",
+                mailClient: "Dit mailprogram aabnes med din besked udfyldt.",
                 error: "Din besked kunne ikke sendes lige nu. Proev igen om et oejeblik."
             }
         },
@@ -3685,6 +3688,7 @@ __turbopack_context__.s([
     "ContactSection",
     ()=>ContactSection
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/linkedin.js [app-client] (ecmascript) <export default as Linkedin>");
@@ -3703,6 +3707,7 @@ var _s = __turbopack_context__.k.signature();
 function ContactSection({ currentPage = 6 }) {
     _s();
     const t = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslations"])();
+    const isStaticSite = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_STATIC_SITE === "true";
     const [isSubmitting, setIsSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [submitState, setSubmitState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         type: "idle",
@@ -3716,6 +3721,21 @@ function ContactSection({ currentPage = 6 }) {
     });
     const handleSubmit = async (e)=>{
         e.preventDefault();
+        if (isStaticSite) {
+            const subject = encodeURIComponent(formData.subject);
+            const body = encodeURIComponent([
+                `Name: ${formData.name}`,
+                `Email: ${formData.email}`,
+                "",
+                formData.message
+            ].join("\n"));
+            window.location.href = `${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["profileLinks"].email}?subject=${subject}&body=${body}`;
+            setSubmitState({
+                type: "success",
+                message: t.contact.form.mailClient
+            });
+            return;
+        }
         try {
             setIsSubmitting(true);
             setSubmitState({
@@ -3769,7 +3789,7 @@ function ContactSection({ currentPage = 6 }) {
                                     children: t.contact.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3777,7 +3797,7 @@ function ContactSection({ currentPage = 6 }) {
                                     children: t.contact.description
                                 }, void 0, false, {
                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 91,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3790,7 +3810,7 @@ function ContactSection({ currentPage = 6 }) {
                                                     className: "h-5 w-5 text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 75,
+                                                    lineNumber: 95,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3803,7 +3823,7 @@ function ContactSection({ currentPage = 6 }) {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 77,
+                                                            lineNumber: 97,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3811,19 +3831,19 @@ function ContactSection({ currentPage = 6 }) {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["profile"].location
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 78,
+                                                            lineNumber: 98,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 76,
+                                                    lineNumber: 96,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 74,
+                                            lineNumber: 94,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3833,7 +3853,7 @@ function ContactSection({ currentPage = 6 }) {
                                                     className: "h-5 w-5 text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 82,
+                                                    lineNumber: 102,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3847,7 +3867,7 @@ function ContactSection({ currentPage = 6 }) {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 84,
+                                                            lineNumber: 104,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3856,19 +3876,19 @@ function ContactSection({ currentPage = 6 }) {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["profile"].email
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 85,
+                                                            lineNumber: 105,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 83,
+                                                    lineNumber: 103,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 81,
+                                            lineNumber: 101,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3878,7 +3898,7 @@ function ContactSection({ currentPage = 6 }) {
                                                     className: "h-5 w-5 text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 91,
+                                                    lineNumber: 111,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3891,7 +3911,7 @@ function ContactSection({ currentPage = 6 }) {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 93,
+                                                            lineNumber: 113,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3900,19 +3920,19 @@ function ContactSection({ currentPage = 6 }) {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["profile"].phone
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 94,
+                                                            lineNumber: 114,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 92,
+                                                    lineNumber: 112,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 110,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3922,7 +3942,7 @@ function ContactSection({ currentPage = 6 }) {
                                                     className: "h-5 w-5 text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 100,
+                                                    lineNumber: 120,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3936,7 +3956,7 @@ function ContactSection({ currentPage = 6 }) {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 102,
+                                                            lineNumber: 122,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3947,31 +3967,31 @@ function ContactSection({ currentPage = 6 }) {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$resume$2d$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["profile"].linkedinLabel
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                                            lineNumber: 103,
+                                                            lineNumber: 123,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                                    lineNumber: 101,
+                                                    lineNumber: 121,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 119,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/resume/contact-section.tsx",
-                                    lineNumber: 73,
+                                    lineNumber: 93,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/resume/contact-section.tsx",
-                            lineNumber: 69,
+                            lineNumber: 89,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3993,12 +4013,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 119,
+                                            lineNumber: 139,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4014,12 +4034,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 149,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 148,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4035,12 +4055,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 159,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 158,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4056,12 +4076,12 @@ function ContactSection({ currentPage = 6 }) {
                                             className: "w-full resize-none border-b border-primary-foreground/30 bg-transparent pb-3 text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/60 focus:border-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/resume/contact-section.tsx",
-                                            lineNumber: 149,
+                                            lineNumber: 169,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 168,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4071,7 +4091,7 @@ function ContactSection({ currentPage = 6 }) {
                                         children: isSubmitting ? t.contact.form.sending : t.contact.form.send
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 158,
+                                        lineNumber: 178,
                                         columnNumber: 15
                                     }, this),
                                     submitState.type !== "idle" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4079,24 +4099,24 @@ function ContactSection({ currentPage = 6 }) {
                                         children: submitState.message
                                     }, void 0, false, {
                                         fileName: "[project]/components/resume/contact-section.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 186,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/resume/contact-section.tsx",
-                                lineNumber: 117,
+                                lineNumber: 137,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/resume/contact-section.tsx",
-                            lineNumber: 116,
+                            lineNumber: 136,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/resume/contact-section.tsx",
-                    lineNumber: 68,
+                    lineNumber: 88,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4106,23 +4126,23 @@ function ContactSection({ currentPage = 6 }) {
                         children: String(currentPage).padStart(2, "0")
                     }, void 0, false, {
                         fileName: "[project]/components/resume/contact-section.tsx",
-                        lineNumber: 181,
+                        lineNumber: 201,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/resume/contact-section.tsx",
-                    lineNumber: 180,
+                    lineNumber: 200,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/resume/contact-section.tsx",
-            lineNumber: 67,
+            lineNumber: 87,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/resume/contact-section.tsx",
-        lineNumber: 66,
+        lineNumber: 86,
         columnNumber: 5
     }, this);
 }

@@ -11,6 +11,7 @@ interface ContactSectionProps {
 
 export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
   const t = useTranslations()
+  const isStaticSite = process.env.NEXT_PUBLIC_STATIC_SITE === "true"
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitState, setSubmitState] = useState<{
     type: "idle" | "success" | "error"
@@ -28,6 +29,25 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (isStaticSite) {
+      const subject = encodeURIComponent(formData.subject)
+      const body = encodeURIComponent(
+        [
+          `Name: ${formData.name}`,
+          `Email: ${formData.email}`,
+          "",
+          formData.message,
+        ].join("\n"),
+      )
+
+      window.location.href = `${profileLinks.email}?subject=${subject}&body=${body}`
+      setSubmitState({
+        type: "success",
+        message: t.contact.form.mailClient,
+      })
+      return
+    }
 
     try {
       setIsSubmitting(true)

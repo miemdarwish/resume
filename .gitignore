@@ -418,4 +418,5 @@ FodyWeavers.xsd
 *.msp
 
 # Custom ruleset files for FxCop and Code Analysis
-*.next
+.next/*
+.next/**
