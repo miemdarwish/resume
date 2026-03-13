@@ -237,12 +237,12 @@
       phone: "Telefoon",
     },
     hero: {
-      greeting: "Hallo. Mijn naam is",
+      greeting: "Hallo, ik ben",
       role: "PMO Consultant",
       yearsOfExperience: "6+ Jaar Ervaring",
       tagline: "PMO | Project Coordinator | 6+ Jaar Ervaring",
       summary:
-        "Een resultaatgerichte PMO Consultant met meer dan 6 jaar ervaring in het ondersteunen van complexe, wereldwijde projecten in snelle omgevingen. Sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie.",
+        "Ik ben een resultaatgerichte PMO Consultant met meer dan 6 jaar ervaring in complexe, internationale projecten. Ik werk sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie.",
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "E-mail",
@@ -250,24 +250,24 @@
     services: {
       title: "Expertisegebieden",
       intro:
-        "Een resultaatgericht PMO-profiel met focus op gestructureerde projectondersteuning, duidelijke stakeholdercommunicatie en betrouwbare coordinatie van leveringen.",
+        "Een sterk PMO-profiel met focus op structuur, duidelijke communicatie en betrouwbare ondersteuning van projecten.",
       body1:
-        "Het CV legt de nadruk op praktische PMO-ondersteuning, sterke rapportagediscipline, afstemming tussen teams, risicoinzicht en consequente governance in internationale projectomgevingen.",
-      body2: "Belangrijke tools zijn Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P en ServiceNow.",
+        "Mijn ervaring draait om praktische PMO-ondersteuning, heldere rapportages, goede afstemming tussen teams, risicoinzicht en consistente governance in internationale projectomgevingen.",
+      body2: "Ik werk onder andere met Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P en ServiceNow.",
       ctaDownload: "Download CV",
       ctaExperience: "Bekijk Ervaring",
       cards: [
         {
           title: "Project- en Portfoliomanagement",
-          description: "Ondersteuning van end-to-end coordinatie, mijlpaalbewaking en leveringsopvolging binnen complexe projectportfolio's.",
+          description: "Ondersteuning van de volledige coordinatie, mijlpaalbewaking en opvolging binnen complexe projectportfolio's.",
         },
         {
           title: "Risico- en Issuemanagement",
-          description: "Risico's vroeg signaleren, afhankelijkheden beheren en teams helpen blokkades weg te nemen voordat ze de levering raken.",
+          description: "Risico's op tijd signaleren, afhankelijkheden bewaken en teams helpen om blokkades snel weg te nemen.",
         },
         {
           title: "Stakeholdercommunicatie",
-          description: "Heldere updates maken, samenwerking tussen teams faciliteren en stakeholders aligned houden.",
+          description: "Heldere updates geven, samenwerking tussen teams makkelijker maken en iedereen goed aangesloten houden.",
         },
         {
           title: "Financiele Operaties en Budgetbewaking",
@@ -275,11 +275,11 @@
         },
         {
           title: "Resourceplanning en Allocatie",
-          description: "Projectvraag afstemmen op beschikbare capaciteit om efficientie en voorspelbaarheid te verbeteren.",
+          description: "Projectbehoefte goed afstemmen op beschikbare capaciteit om efficientie en voorspelbaarheid te verbeteren.",
         },
         {
           title: "Governance en Compliance",
-          description: "Documentatie- en governancepraktijken standaardiseren voor consistente en conforme projectuitvoering.",
+          description: "Documentatie en governance helder en consistent houden voor een soepele en correcte projectuitvoering.",
         },
       ],
     },
@@ -287,9 +287,9 @@
       title: "Ervaring",
       coverLetter: "Samenvatting",
       summaryParagraphs: [
-        "Resultaatgerichte Project Management Officer met meer dan 6 jaar ervaring in het ondersteunen van complexe, wereldwijde projecten in snelle omgevingen.",
-        "Sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie, met een sterke staat van dienst in het aligned houden van teams en stakeholders.",
-        "Bekend om het mogelijk maken van projectsucces door gestructureerde ondersteuning, duidelijke communicatie, proactief probleemoplossen en goed beheerde projectdocumentatie.",
+        "Resultaatgerichte Project Management Officer met meer dan 6 jaar ervaring in complexe, internationale projecten.",
+        "Sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie, met veel focus op duidelijke samenwerking tussen teams en stakeholders.",
+        "Bekend om gestructureerde ondersteuning, heldere communicatie, proactief handelen en goed georganiseerde projectdocumentatie.",
       ],
       items: [
         {
@@ -298,12 +298,12 @@
           title: "Project Management Officer",
           company: "Atradius",
           highlights: [
-            "Faciliteerde samenwerking tussen projectmanagers en teams, met focus op tijdige en budgetbewuste levering.",
-            "Optimaliseerde resourceplanning om projectbehoeften beter af te stemmen op beschikbare capaciteit.",
-            "Beheerde risico's en afhankelijkheden om de voortgang soepel te laten verlopen.",
-            "Standaardiseerde governance-raamwerken om naleving van projectprocessen te ondersteunen.",
-            "Maakte en deelde duidelijke rapportages om stakeholders op de hoogte te houden.",
-            "Organiseerde en beheerde projectdocumentatie voor consistentie en toegankelijkheid.",
+            "Ondersteunde de samenwerking tussen projectmanagers en teams, met focus op levering op tijd en binnen budget.",
+            "Verbeterde de resourceplanning door projectbehoeften beter af te stemmen op beschikbare capaciteit.",
+            "Hield risico's en afhankelijkheden goed in beeld om de voortgang soepel te laten lopen.",
+            "Bracht meer structuur in governance om projectprocessen beter te laten aansluiten.",
+            "Maakte duidelijke rapportages zodat stakeholders steeds goed op de hoogte bleven.",
+            "Hield projectdocumentatie overzichtelijk, consistent en makkelijk terug te vinden.",
           ],
         },
         {
@@ -312,10 +312,10 @@
           title: "Project Coordinator",
           company: "Tata Steel",
           highlights: [
-            "Ontwierp en coordineerde trainingsprogramma's voor teamleden om vaardigheden en prestaties te verbeteren.",
-            "Beheerde projecttaken en afhankelijkheden over meerdere initiatieven heen.",
-            "Fungeerde als belangrijke schakel tussen Sales, Marketing en Supply Chain.",
-            "Signaleerde en beperkte risico's, verminderde vertragingen en hield stakeholders geinformeerd.",
+            "Ontwierp en coordineerde trainingsprogramma's om teamleden sterker te maken in hun werk.",
+            "Bewaakte projecttaken en afhankelijkheden over meerdere initiatieven tegelijk.",
+            "Was de verbindende schakel tussen Sales, Marketing en Supply Chain.",
+            "Signaleerde risico's op tijd, hielp vertragingen beperken en hield stakeholders goed geinformeerd.",
           ],
         },
         {
@@ -324,9 +324,9 @@
           title: "Team Leader",
           company: "Hotel Specials",
           highlights: [
-            "Voerde kwaliteitsverbeteringen door die fouten verminderden en klanttevredenheid verhoogden.",
+            "Voerde verbeteringen door die fouten verminderden en de klanttevredenheid verhoogden.",
             "Coachte en begeleidde een team van meer dan 10 adviseurs.",
-            "Werkte samen met hotelmanagement en interne teams om communicatie te stroomlijnen en escalaties op te lossen.",
+            "Werkte samen met hotelmanagement en interne teams om communicatie soepel te laten verlopen en escalaties op te lossen.",
           ],
         },
         {
@@ -397,8 +397,8 @@
       personalSkillsList: [
         "Duidelijke Communicatie",
         "Organisatorische Vaardigheden",
-        "Aanpasbaar in Internationale Omgevingen",
-        "Proactief Probleemoplossend",
+        "Snel Schakelen in Internationale Omgevingen",
+        "Proactief Problemen Oplossen",
         "Oog voor Detail",
         "Samenwerking & Teamwork",
       ],
@@ -423,7 +423,7 @@
     contact: {
       title: "Neem contact op",
       description:
-        "Open voor gesprekken over PMO-, projectcoordinatie- en stakeholder support-rollen binnen internationale teams en dynamische omgevingen.",
+        "Open voor gesprekken over PMO, projectcoordinatie en stakeholder support binnen internationale teams en dynamische omgevingen.",
       address: "Adres",
       email: "E-mail",
       phone: "Telefoon",
@@ -436,8 +436,8 @@
         send: "Verzenden",
         sending: "Verzenden...",
         success: "Bedankt voor je bericht. Miriam neemt zo snel mogelijk contact met je op.",
-        mailClient: "Je e-mailapp wordt geopend met je bericht alvast ingevuld.",
-        error: "Je bericht kon nu niet worden verzonden. Probeer het zo meteen opnieuw.",
+        mailClient: "Je mailapp wordt geopend met je bericht alvast ingevuld.",
+        error: "Je bericht kon nu niet worden verzonden. Probeer het straks nog een keer.",
       },
     },
     footer: {
@@ -460,12 +460,12 @@
       phone: "Telefon",
     },
     hero: {
-      greeting: "Hej. Mit navn er",
+      greeting: "Hej, jeg hedder",
       role: "PMO-konsulent",
       yearsOfExperience: "6+ Ars Erfaring",
       tagline: "PMO | Projektkoordinator | 6+ Ars Erfaring",
       summary:
-        "En resultatorienteret PMO-konsulent med over 6 ars erfaring i at stotte komplekse, globale projekter i hurtige miljoer. Staerk inden for risikostyring, governance, milepaelsopfolgning og interessentkommunikation.",
+        "Jeg er en resultatorienteret PMO-konsulent med mere end 6 ars erfaring fra komplekse, internationale projekter. Jeg arbejder staerkt med risikostyring, governance, milepaelsopfolgning og interessentkommunikation.",
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "E-mail",
@@ -473,24 +473,24 @@
     services: {
       title: "Kompetenceomrader",
       intro:
-        "En resultatorienteret PMO-profil med fokus pa struktureret projektstotte, klar interessentkommunikation og paalidelig leverancekoordinering.",
+        "En staerk PMO-profil med fokus pa struktur, klar kommunikation og stabil projektstotte.",
       body1:
-        "CV'et fremhaever praktisk PMO-stotte, staerk rapporteringsdisciplin, koordinering pa tvaers af teams, risikotransparens og konsekvent governance i internationale projektmiljoer.",
-      body2: "Centrale vaerktojer omfatter Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P og ServiceNow.",
+        "Min erfaring handler om praktisk PMO-stotte, tydelig rapportering, godt samarbejde pa tvaers af teams, risikotransparens og stabil governance i internationale projektmiljoer.",
+      body2: "Jeg arbejder blandt andet med Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P og ServiceNow.",
       ctaDownload: "Download CV",
       ctaExperience: "Se Erfaring",
       cards: [
         {
           title: "Projekt- og Portefoljestyring",
-          description: "Stotte til end-to-end koordinering, milepaelsopfolgning og leveranceopfolgning pa tvaers af komplekse projektportefoljer.",
+          description: "Stotte til koordinering, milepaelsopfolgning og opfoelgning pa leverancer i komplekse projektportefoljer.",
         },
         {
           title: "Risiko- og Issuehaandtering",
-          description: "Identificerer risici tidligt, styrer afhængigheder og hjaelper teams med at fjerne blokeringer for levering.",
+          description: "Finder risici i tide, holder styr pa afhængigheder og hjaelper teams med at fjerne blokeringer hurtigt.",
         },
         {
           title: "Interessentkommunikation",
-          description: "Udarbejder klare opdateringer, faciliterer samarbejde pa tvaers af teams og holder interessenter aligned.",
+          description: "Laver klare opdateringer, styrker samarbejdet pa tvaers af teams og holder alle godt orienteret.",
         },
         {
           title: "Finansielle Operationer og Budgetkontrol",
@@ -498,11 +498,11 @@
         },
         {
           title: "Ressourceplanlaegning og Allokering",
-          description: "Afstemmer projektbehov med tilgaengelig kapacitet for at forbedre effektivitet og forudsigelighed.",
+          description: "Afstemmer projektbehov med tilgaengelig kapacitet for at skabe mere effektivitet og bedre overblik.",
         },
         {
           title: "Governance og Compliance",
-          description: "Standardiserer dokumentations- og governancepraksis for konsekvent og compliant projektudfoerelse.",
+          description: "Holder dokumentation og governance ensartet, sa projekter koerer mere stabilt og korrekt.",
         },
       ],
     },
@@ -510,9 +510,9 @@
       title: "Erfaring",
       coverLetter: "Profil",
       summaryParagraphs: [
-        "Resultatorienteret Project Management Officer med over 6 ars erfaring i at stotte komplekse, globale projekter i hurtige miljoer.",
-        "Staerk inden for risikostyring, governance, milepaelsopfolgning og interessentkommunikation med dokumenteret evne til at holde teams og interessenter aligned.",
-        "Kendt for at skabe projektsucces gennem struktureret stotte, klar kommunikation, proaktiv problemlosning og velorganiseret projektdokumentation.",
+        "Resultatorienteret Project Management Officer med mere end 6 ars erfaring fra komplekse, internationale projekter.",
+        "Staerk inden for risikostyring, governance, milepaelsopfolgning og interessentkommunikation med fokus pa godt samarbejde mellem teams og interessenter.",
+        "Kendt for at skabe fremdrift gennem struktur, klar kommunikation, proaktiv tilgang og velholdt projektdokumentation.",
       ],
       items: [
         {
@@ -521,12 +521,12 @@
           title: "Project Management Officer",
           company: "Atradius",
           highlights: [
-            "Faciliterede tværfunktionelt samarbejde med projektledere med fokus pa levering til tiden og inden for budget.",
-            "Optimerede ressourceplanlaegning for bedre match mellem behov og kapacitet.",
-            "Haandterede risici og afhaengigheder for at sikre stabil projektfremdrift.",
-            "Standardiserede governance-rammer for at understotte efterlevelse af projektprocesser.",
-            "Udarbejdede og delte klare rapporter for at holde interessenter opdateret.",
-            "Organiserede og vedligeholdt projektdokumentation for konsistens og tilgaengelighed.",
+            "Understoettede samarbejdet mellem projektledere og teams med fokus pa levering til tiden og inden for budget.",
+            "Forbedrede ressourceplanlaegning, sa behov og kapacitet passede bedre sammen.",
+            "Holdt styr pa risici og afhaengigheder for at sikre stabil fremdrift i projekterne.",
+            "Skabte mere struktur i governance for at styrke projektprocesserne.",
+            "Lavede klare rapporter, sa interessenter altid var opdaterede.",
+            "Holdt projektdokumentation overskuelig, ensartet og let at finde.",
           ],
         },
         {
@@ -535,10 +535,10 @@
           title: "Project Coordinator",
           company: "Tata Steel",
           highlights: [
-            "Designede og koordinerede traeningsprogrammer for teammedlemmer for at forbedre kompetencer og performance.",
-            "Styrede projektopgaver og afhaengigheder pa tværs af flere initiativer.",
-            "Fungerede som vigtig bindeled mellem Sales, Marketing og Supply Chain.",
-            "Identificerede og reducerede risici, begraensede forsinkelser og holdt interessenter orienteret.",
+            "Designede og koordinerede traeningsforloeb, som styrkede teamets kompetencer og performance.",
+            "Holdt styr pa projektopgaver og afhaengigheder pa tvaers af flere initiativer.",
+            "Var et vigtigt bindeled mellem Sales, Marketing og Supply Chain.",
+            "Fangede risici i tide, begraensede forsinkelser og holdt interessenter godt orienteret.",
           ],
         },
         {
@@ -547,9 +547,9 @@
           title: "Team Leader",
           company: "Hotel Specials",
           highlights: [
-            "Implementerede kvalitetsforbedringer, som reducerede fejl og forbedrede kundetilfredshed.",
-            "Coachede og mentorstottede et team pa mere end 10 raadgivere.",
-            "Samarbejdede med hotelledelse og interne afdelinger for at effektivisere kommunikation og lose eskalationer.",
+            "Indfoerte forbedringer, som reducerede fejl og loeftede kundetilfredsheden.",
+            "Coachede og stoettede et team pa mere end 10 raadgivere.",
+            "Samarbejdede med hotelledelse og interne afdelinger for at fa kommunikationen til at glide bedre og loese eskalationer.",
           ],
         },
         {
@@ -620,7 +620,7 @@
       personalSkillsList: [
         "Klar Kommunikation",
         "Organisatoriske Faerdigheder",
-        "Tilpasningsdygtig i Internationale Miljoer",
+        "Fleksibel i Internationale Miljoer",
         "Proaktiv Problemlosning",
         "Opmarksomhed pa Detaljer",
         "Samarbejde & Teamwork",
@@ -646,7 +646,7 @@
     contact: {
       title: "Kom i kontakt",
       description:
-        "Aben for dialog om PMO-, projektkoordinations- og stakeholder support-muligheder pa tvaers af internationale teams og hurtige leverancemiljoer.",
+        "Aben for en snak om PMO, projektkoordinering og stakeholder support i internationale teams og projekter med tempo pa.",
       address: "Adresse",
       email: "E-mail",
       phone: "Telefon",
@@ -658,9 +658,9 @@
         message: "Besked...",
         send: "Send",
         sending: "Sender...",
-        success: "Tak for din besked. Miriam vender tilbage til dig hurtigst muligt.",
-        mailClient: "Dit mailprogram aabnes med din besked udfyldt.",
-        error: "Din besked kunne ikke sendes lige nu. Proev igen om et oejeblik.",
+        success: "Tak for din besked. Miriam vender tilbage hurtigst muligt.",
+        mailClient: "Din mailapp aabnes med beskeden udfyldt.",
+        error: "Din besked kunne ikke sendes lige nu. Proev igen lidt senere.",
       },
     },
     footer: {
