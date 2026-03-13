@@ -1,4 +1,4 @@
-const isGitHubPages = process.env.GITHUB_PAGES === "true"
+const isGitHubPages = process.env.GITHUB_ACTIONS === "true" && process.env.GITHUB_PAGES === "true"
 const repoName = "resume"
 
 /** @type {import('next').NextConfig} */
