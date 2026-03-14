@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Linkedin, Mail, MapPin, Menu, Phone, X } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { SidebarSearch } from "@/components/resume/sidebar-search"
 import { profile, profileLinks, totalPages } from "@/lib/resume-data"
 
 const navItems = ["home", "services", "resume", "skills", "contact"] as const
@@ -18,9 +19,18 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
   const [menuOpen, setMenuOpen] = useState(false)
   const t = useTranslations()
 
+  const isNavItem = (id: string): id is (typeof navItems)[number] => navItems.includes(id as (typeof navItems)[number])
+
   const handleNavClick = (id: string) => {
     onNavClick(id)
     setMenuOpen(false)
+  }
+
+  const handleSearchSelect = (sectionId: string) => {
+    if (!isNavItem(sectionId)) {
+      return
+    }
+    handleNavClick(sectionId)
   }
 
   const getNavLabel = (id: (typeof navItems)[number]) => t.nav[id]
@@ -36,15 +46,19 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
             <LanguageSwitcher variant="light" />
           </div>
 
-          <div className="mb-12 flex items-center gap-2 text-sm text-sidebar-foreground/70">
+          <div className="mb-3 flex items-center gap-2 text-sm text-sidebar-foreground/70">
             <span className="font-bold text-sidebar-foreground">{String(currentPage).padStart(2, "0")}</span>
             <div className="h-px w-16 bg-sidebar-foreground/50" />
             <span>{String(totalPages).padStart(2, "0")}</span>
           </div>
 
-          <div className="relative flex-1">
+          <div className="mb-4">
+            <SidebarSearch inputId="sidebar-search" onSelectSection={handleSearchSelect} />
+          </div>
+
+          <div className="relative flex-1 overflow-y-auto pr-1">
             <div className={`transition-opacity duration-300 ${menuOpen ? "opacity-0" : "opacity-100"}`}>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="mt-0.5 flex h-5 w-5 items-center justify-center">
                     <span className="h-2 w-2 rounded-full bg-sidebar-foreground/70" />
@@ -103,7 +117,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
             </div>
           </div>
 
-          <div className="mt-auto">
+          <div className="mt-4 shrink-0">
             <div className="text-3xl text-sidebar-foreground/80" style={{ fontFamily: "var(--font-signature)" }}>
               {profile.name}
             </div>
@@ -142,6 +156,10 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
               <span className="font-bold text-sidebar-foreground">{String(currentPage).padStart(2, "0")}</span>
               <div className="h-px w-16 bg-sidebar-foreground/50" />
               <span>{String(totalPages).padStart(2, "0")}</span>
+            </div>
+
+            <div className="mb-4">
+              <SidebarSearch inputId="mobile-sidebar-search" onSelectSection={handleSearchSelect} />
             </div>
 
             <nav className="space-y-4">
