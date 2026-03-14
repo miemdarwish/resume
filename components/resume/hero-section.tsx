@@ -12,7 +12,7 @@ export function HeroSection() {
 
   return (
     <section id="home" className="scroll-mt-20 min-h-screen flex flex-col lg:flex-row">
-      <div className="flex-1 bg-[#F8F0F0] flex items-center justify-center px-5 py-12 sm:px-8 lg:p-16">
+      <div className="order-2 flex flex-1 items-center justify-center bg-[#F8F0F0] px-5 py-12 sm:px-8 lg:order-1 lg:p-16">
         <div className="max-w-xl">
           <p className="mb-4 text-base text-muted-foreground sm:text-lg">{t.hero.greeting}</p>
           <h1 className="mb-6 text-5xl font-bold leading-[0.95] text-primary sm:text-6xl lg:text-8xl">
@@ -53,7 +53,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative flex flex-1 items-center justify-center overflow-hidden bg-background px-5 py-12 sm:px-8 lg:p-16">
+      <div className="relative order-1 flex flex-1 items-center justify-center overflow-hidden bg-background px-5 py-12 sm:px-8 lg:order-2 lg:p-16">
         <div className="text-center">
           <div className="relative mx-auto mb-6 h-56 w-56 sm:h-64 sm:w-64 lg:h-80 lg:w-80">
             <Image

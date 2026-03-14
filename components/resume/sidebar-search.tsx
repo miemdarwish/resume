@@ -18,6 +18,33 @@ interface SidebarSearchProps {
 
 const HIGHLIGHT_ATTR = "data-resume-search-highlight"
 
+function getTopOffset() {
+  const fixedHeader = document.querySelector("header.fixed.top-0")
+  const headerHeight = fixedHeader instanceof HTMLElement ? fixedHeader.offsetHeight : 0
+  return headerHeight + 12
+}
+
+function scrollToFirstHighlight(section: HTMLElement) {
+  const firstHighlight = section.querySelector(`mark[${HIGHLIGHT_ATTR}]`)
+  if (!(firstHighlight instanceof HTMLElement)) {
+    return
+  }
+
+  const offset = getTopOffset()
+  const rect = firstHighlight.getBoundingClientRect()
+  const isVisible = rect.top >= offset && rect.bottom <= window.innerHeight
+
+  if (isVisible) {
+    return
+  }
+
+  const targetY = firstHighlight.getBoundingClientRect().top + window.scrollY - offset
+  window.scrollTo({
+    top: Math.max(targetY, 0),
+    behavior: "smooth",
+  })
+}
+
 function clearSectionHighlights() {
   const marks = document.querySelectorAll(`mark[${HIGHLIGHT_ATTR}]`)
   marks.forEach((mark) => {
@@ -122,6 +149,10 @@ function highlightInSection(sectionId: string, query: string) {
     }
 
     node.parentNode?.replaceChild(fragment, node)
+  })
+
+  window.requestAnimationFrame(() => {
+    scrollToFirstHighlight(section)
   })
 }
 
