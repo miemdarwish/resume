@@ -16,6 +16,7 @@ const CONTACT_ERROR_CODES = [
   "recaptchaNotConfigured",
   "emailServiceNotConfigured",
   "smtpAuthDisabled",
+  "smtpInvalidCredentials",
   "sendFailed",
   "formInvalid",
 ] as const
@@ -107,8 +108,12 @@ export async function POST(request: Request) {
     }
 
     console.error("Contact email failed:", error)
-    if (error instanceof Error && /smtpclientauthentication is disabled|invalid login/i.test(error.message)) {
+    if (error instanceof Error && /smtpclientauthentication is disabled|5\.7\.139/i.test(error.message)) {
       return NextResponse.json({ errorCode: "smtpAuthDisabled" satisfies ContactErrorCode }, { status: 500 })
+    }
+
+    if (error instanceof Error && /badcredentials|username and password not accepted|invalid login|5\.7\.8/i.test(error.message)) {
+      return NextResponse.json({ errorCode: "smtpInvalidCredentials" satisfies ContactErrorCode }, { status: 500 })
     }
 
     return NextResponse.json({ errorCode: "sendFailed" satisfies ContactErrorCode }, { status: 500 })

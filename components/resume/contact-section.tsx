@@ -20,6 +20,7 @@ const CONTACT_ERROR_CODES = [
   "recaptchaNotConfigured",
   "emailServiceNotConfigured",
   "smtpAuthDisabled",
+  "smtpInvalidCredentials",
   "sendFailed",
   "formInvalid",
 ] as const
@@ -139,6 +140,8 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
         return t.contact.form.errors.emailServiceNotConfigured
       case "smtpAuthDisabled":
         return t.contact.form.errors.smtpAuthDisabled
+      case "smtpInvalidCredentials":
+        return t.contact.form.errors.smtpInvalidCredentials
       case "sendFailed":
         return t.contact.form.errors.sendFailed
       case "formInvalid":
