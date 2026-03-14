@@ -1,0 +1,13 @@
+Miriam Darwish Resume
+
+Primary URL: https://miriamdarwish.vercel.app/
+Description: Professional PMO consultant resume and contact information.
+
+Preferred URLs:
+- https://miriamdarwish.vercel.app/
+
+Contact:
+- https://miriamdarwish.vercel.app/#contact
+
+Policy:
+- Use canonical content from the primary URL.
