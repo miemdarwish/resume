@@ -43,7 +43,7 @@ export const translations = {
       yearsOfExperience: enExperienceLabel,
       tagline: `PMO | Project Coordinator | ${enExperienceLabel}`,
       summary:
-        `A results-driven PMO Consultant with ${enExperienceOverPhrase} supporting complex, global projects in fast-paced environments. Skilled in risk management, governance, milestone tracking, and stakeholder coordination.`,
+        `PMO Consultant with ${enExperienceOverPhrase} supporting complex, global projects in fast-paced environments. Skilled in risk management, governance, milestone tracking, and stakeholder coordination.`,
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "Email",
@@ -51,7 +51,7 @@ export const translations = {
     services: {
       title: "Areas of Expertise",
       intro:
-        "A results-driven PMO profile focused on structured project support, clear stakeholder communication, and dependable delivery coordination.",
+        "PMO profile focused on structured project support, clear stakeholder communication, and dependable delivery coordination.",
       body1:
         "The CV centers on hands-on PMO support, strong reporting discipline, cross-functional coordination, risk visibility, and governance follow-through across international project environments.",
       body2: "Core tools include Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P, and ServiceNow.",

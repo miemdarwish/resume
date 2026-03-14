@@ -21,19 +21,19 @@ export function LanguageSwitcher({ variant = "dark" }: LanguageSwitcherProps) {
   const activeClasses = variant === "light" ? "text-sidebar-foreground font-bold" : "text-primary font-bold"
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="inline-flex items-center gap-2">
       {languages.map((lang, index) => (
-        <span key={lang.code} className="flex items-center">
+        <div key={lang.code} className="flex items-center gap-2">
           <button
             onClick={() => setLocale(lang.code)}
-            className={`cursor-pointer text-sm transition-colors ${locale === lang.code ? activeClasses : baseClasses}`}
+            className={`w-7 cursor-pointer text-center text-sm transition-colors ${locale === lang.code ? activeClasses : baseClasses}`}
           >
             {lang.label}
           </button>
           {index < languages.length - 1 && (
-            <span className={`mx-1 ${variant === "light" ? "text-sidebar-foreground/50" : "text-muted-foreground/50"}`}>|</span>
+            <span className={`${variant === "light" ? "text-sidebar-foreground/50" : "text-muted-foreground/50"}`}>|</span>
           )}
-        </span>
+        </div>
       ))}
     </div>
   )
