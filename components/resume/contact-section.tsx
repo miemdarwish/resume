@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Script from "next/script"
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
@@ -46,6 +46,24 @@ async function getRecaptchaToken(siteKey: string) {
   })
 }
 
+async function getRuntimeRecaptchaSiteKey() {
+  try {
+    const response = await fetch("/api/recaptcha/site-key", {
+      method: "GET",
+      cache: "no-store",
+    })
+
+    if (!response.ok) {
+      return ""
+    }
+
+    const data = (await response.json()) as { siteKey?: string }
+    return String(data.siteKey || "").trim()
+  } catch {
+    return ""
+  }
+}
+
 interface ContactSectionProps {
   currentPage?: number
 }
@@ -53,7 +71,7 @@ interface ContactSectionProps {
 export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
   const t = useTranslations()
   const isStaticSite = process.env.NEXT_PUBLIC_STATIC_SITE === "true"
-  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim()
+  const [recaptchaSiteKey, setRecaptchaSiteKey] = useState(() => process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim() || "")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitState, setSubmitState] = useState<{
     type: "idle" | "success" | "error"
@@ -68,6 +86,28 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
     subject: "",
     message: "",
   })
+
+  useEffect(() => {
+    if (isStaticSite || recaptchaSiteKey) {
+      return
+    }
+
+    let isCancelled = false
+
+    const loadRecaptchaSiteKey = async () => {
+      const runtimeKey = await getRuntimeRecaptchaSiteKey()
+
+      if (!isCancelled && runtimeKey) {
+        setRecaptchaSiteKey(runtimeKey)
+      }
+    }
+
+    void loadRecaptchaSiteKey()
+
+    return () => {
+      isCancelled = true
+    }
+  }, [isStaticSite, recaptchaSiteKey])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -103,11 +143,17 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
       setIsSubmitting(true)
       setSubmitState({ type: "idle", message: "" })
 
-      if (!recaptchaSiteKey) {
+      const siteKey = recaptchaSiteKey || (await getRuntimeRecaptchaSiteKey())
+
+      if (!siteKey) {
         throw new Error("Security verification is not configured. Please try again later.")
       }
 
-      const recaptchaToken = await getRecaptchaToken(recaptchaSiteKey)
+      if (siteKey !== recaptchaSiteKey) {
+        setRecaptchaSiteKey(siteKey)
+      }
+
+      const recaptchaToken = await getRecaptchaToken(siteKey)
 
       const response = await fetch("/api/contact", {
         method: "POST",
