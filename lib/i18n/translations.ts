@@ -1,4 +1,22 @@
-﻿export const translations = {
+﻿import { getExperienceYearsFrom, getExperienceYearsPlusFrom } from "../experience-core"
+
+export const EXPERIENCE_START = {
+  year: 2018,
+  month: 9,
+} as const
+
+const experienceYears = getExperienceYearsFrom(EXPERIENCE_START)
+const experienceYearsPlus = getExperienceYearsPlusFrom(EXPERIENCE_START)
+
+const enExperienceLabel = `${experienceYearsPlus} Years of Experience`
+const nlExperienceLabel = `${experienceYearsPlus} Jaar Ervaring`
+const daExperienceLabel = `${experienceYearsPlus} Ars Erfaring`
+
+const enExperienceOverPhrase = `over ${experienceYears} years of experience`
+const nlExperienceOverPhrase = `meer dan ${experienceYears} jaar ervaring`
+const daExperienceOverPhrase = `mere end ${experienceYears} ars erfaring`
+
+export const translations = {
   en: {
     nav: {
       home: "Home",
@@ -16,10 +34,10 @@
     hero: {
       greeting: "Hello. My name is",
       role: "PMO Consultant",
-      yearsOfExperience: "6+ Years of Experience",
-      tagline: "PMO | Project Coordinator | 6+ Years of Experience",
+      yearsOfExperience: enExperienceLabel,
+      tagline: `PMO | Project Coordinator | ${enExperienceLabel}`,
       summary:
-        "A results-driven PMO Consultant with over 6 years of experience supporting complex, global projects in fast-paced environments. Skilled in risk management, governance, milestone tracking, and stakeholder coordination.",
+        `A results-driven PMO Consultant with ${enExperienceOverPhrase} supporting complex, global projects in fast-paced environments. Skilled in risk management, governance, milestone tracking, and stakeholder coordination.`,
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "Email",
@@ -64,7 +82,7 @@
       title: "Experience",
       coverLetter: "Summary",
       summaryParagraphs: [
-        "Results-driven Project Management Officer with over 6 years of experience supporting complex, global projects in fast-paced environments.",
+        `Results-driven Project Management Officer with ${enExperienceOverPhrase} supporting complex, global projects in fast-paced environments.`,
         "Skilled in risk management, governance, milestone tracking, and stakeholder coordination, with a strong record of keeping teams aligned and stakeholders informed.",
         "Known for enabling project success through structured support, clear communication, proactive problem solving, and well-maintained project documentation.",
       ],
@@ -244,7 +262,7 @@
     },
     footer: {
       rights: "All rights reserved.",
-      tagline: "PMO Consultant | Project Coordinator | 6+ Years of Experience",
+      tagline: `PMO Consultant | Project Coordinator | ${enExperienceLabel}`,
     },
   },
   nl: {
@@ -264,10 +282,10 @@
     hero: {
       greeting: "Hallo, ik ben",
       role: "PMO Consultant",
-      yearsOfExperience: "6+ Jaar Ervaring",
-      tagline: "PMO | Project Coordinator | 6+ Jaar Ervaring",
+      yearsOfExperience: nlExperienceLabel,
+      tagline: `PMO | Project Coordinator | ${nlExperienceLabel}`,
       summary:
-        "Ik ben een resultaatgerichte PMO Consultant met meer dan 6 jaar ervaring in complexe, internationale projecten. Ik werk sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie.",
+        `Ik ben een resultaatgerichte PMO Consultant met ${nlExperienceOverPhrase} in complexe, internationale projecten. Ik werk sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie.`,
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "E-mail",
@@ -312,7 +330,7 @@
       title: "Ervaring",
       coverLetter: "Samenvatting",
       summaryParagraphs: [
-        "Resultaatgerichte Project Management Officer met meer dan 6 jaar ervaring in complexe, internationale projecten.",
+        `Resultaatgerichte Project Management Officer met ${nlExperienceOverPhrase} in complexe, internationale projecten.`,
         "Sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie, met veel focus op duidelijke samenwerking tussen teams en stakeholders.",
         "Bekend om gestructureerde ondersteuning, heldere communicatie, proactief handelen en goed georganiseerde projectdocumentatie.",
       ],
@@ -492,7 +510,7 @@
     },
     footer: {
       rights: "Alle rechten voorbehouden.",
-      tagline: "PMO Consultant | Projectcoordinator | 6+ Jaar Ervaring",
+      tagline: `PMO Consultant | Projectcoordinator | ${nlExperienceLabel}`,
     },
   },
   da: {
@@ -512,10 +530,10 @@
     hero: {
       greeting: "Hej, jeg hedder",
       role: "PMO-konsulent",
-      yearsOfExperience: "6+ Ars Erfaring",
-      tagline: "PMO | Projektkoordinator | 6+ Ars Erfaring",
+      yearsOfExperience: daExperienceLabel,
+      tagline: `PMO | Projektkoordinator | ${daExperienceLabel}`,
       summary:
-        "Jeg er en resultatorienteret PMO-konsulent med mere end 6 ars erfaring fra komplekse, internationale projekter. Jeg arbejder staerkt med risikostyring, governance, milepaelsopfolgning og interessentkommunikation.",
+        `Jeg er en resultatorienteret PMO-konsulent med ${daExperienceOverPhrase} fra komplekse, internationale projekter. Jeg arbejder staerkt med risikostyring, governance, milepaelsopfolgning og interessentkommunikation.`,
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "E-mail",
@@ -560,7 +578,7 @@
       title: "Erfaring",
       coverLetter: "Profil",
       summaryParagraphs: [
-        "Resultatorienteret Project Management Officer med mere end 6 ars erfaring fra komplekse, internationale projekter.",
+        `Resultatorienteret Project Management Officer med ${daExperienceOverPhrase} fra komplekse, internationale projekter.`,
         "Staerk inden for risikostyring, governance, milepaelsopfolgning og interessentkommunikation med fokus pa godt samarbejde mellem teams og interessenter.",
         "Kendt for at skabe fremdrift gennem struktur, klar kommunikation, proaktiv tilgang og velholdt projektdokumentation.",
       ],
@@ -740,7 +758,7 @@
     },
     footer: {
       rights: "Alle rettigheder forbeholdes.",
-      tagline: "PMO-konsulent | Projektkoordinator | 6+ Ars Erfaring",
+      tagline: `PMO-konsulent | Projektkoordinator | ${daExperienceLabel}`,
     },
   },
 } as const

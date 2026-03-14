@@ -12,12 +12,16 @@ interface I18nContextType {
 const I18nContext = createContext<I18nContextType | undefined>(undefined)
 const STORAGE_KEY = "resume-locale"
 
+function isLocale(value: string): value is Locale {
+  return value in translations
+}
+
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>("en")
 
   useEffect(() => {
     const storedLocale = window.localStorage.getItem(STORAGE_KEY)
-    if (storedLocale === "en" || storedLocale === "nl" || storedLocale === "da") {
+    if (storedLocale && isLocale(storedLocale)) {
       setLocale(storedLocale)
     }
   }, [])

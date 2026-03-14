@@ -150,9 +150,10 @@ export function SkillsSection({ currentPage = 5 }: SkillsSectionProps) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
+          observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0 },
     )
 
     if (sectionRef.current) {
