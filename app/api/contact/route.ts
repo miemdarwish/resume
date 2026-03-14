@@ -3,15 +3,38 @@ import nodemailer from "nodemailer"
 import { z } from "zod"
 import { profile } from "@/lib/resume-data"
 
+const CONTACT_ERROR_CODES = [
+  "nameRequired",
+  "nameTooLong",
+  "emailInvalid",
+  "emailTooLong",
+  "subjectRequired",
+  "subjectTooLong",
+  "messageRequired",
+  "messageTooLong",
+  "recaptchaFailed",
+  "recaptchaNotConfigured",
+  "emailServiceNotConfigured",
+  "smtpAuthDisabled",
+  "sendFailed",
+  "formInvalid",
+] as const
+
+type ContactErrorCode = (typeof CONTACT_ERROR_CODES)[number]
+
+function isContactErrorCode(value: string): value is ContactErrorCode {
+  return CONTACT_ERROR_CODES.includes(value as ContactErrorCode)
+}
+
 const contactSchema = z.object({
-  name: z.string().trim().min(1, "Please enter your name.").max(120, "Name is too long."),
-  email: z.string().trim().email("Please enter a valid email address.").max(160, "Email is too long."),
-  subject: z.string().trim().min(1, "Please enter a subject.").max(160, "Subject is too long."),
-  message: z.string().trim().min(1, "Please enter your message.").max(4000, "Message is too long."),
+  name: z.string().trim().min(1, "nameRequired").max(120, "nameTooLong"),
+  email: z.string().trim().email("emailInvalid").max(160, "emailTooLong"),
+  subject: z.string().trim().min(1, "subjectRequired").max(160, "subjectTooLong"),
+  message: z.string().trim().min(1, "messageRequired").max(4000, "messageTooLong"),
   recaptchaToken: z
-    .string({ required_error: "reCAPTCHA verification failed. Please try again." })
+    .string({ required_error: "recaptchaFailed" })
     .trim()
-    .min(1, "reCAPTCHA verification failed. Please try again."),
+    .min(1, "recaptchaFailed"),
 })
 
 const recaptchaVerificationSchema = z.object({
@@ -29,14 +52,11 @@ export async function POST(request: Request) {
   const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY?.trim()
 
   if (!smtpUser || !smtpPass || !contactTo) {
-    return NextResponse.json(
-      { error: "Email service is not configured. Add SMTP_USER, SMTP_PASS, and CONTACT_TO in .env." },
-      { status: 500 },
-    )
+    return NextResponse.json({ errorCode: "emailServiceNotConfigured" satisfies ContactErrorCode }, { status: 500 })
   }
 
   if (!recaptchaSecret) {
-    return NextResponse.json({ error: "Spam protection is not configured. Add RECAPTCHA_SECRET_KEY in .env." }, { status: 500 })
+    return NextResponse.json({ errorCode: "recaptchaNotConfigured" satisfies ContactErrorCode }, { status: 500 })
   }
 
   try {
@@ -44,7 +64,7 @@ export async function POST(request: Request) {
     const isRecaptchaValid = await verifyRecaptchaToken(payload.recaptchaToken, recaptchaSecret)
 
     if (!isRecaptchaValid) {
-      return NextResponse.json({ error: "reCAPTCHA verification failed. Please try again." }, { status: 400 })
+      return NextResponse.json({ errorCode: "recaptchaFailed" satisfies ContactErrorCode }, { status: 400 })
     }
 
     const transporter = nodemailer.createTransport({
@@ -82,11 +102,16 @@ export async function POST(request: Request) {
   } catch (error) {
     if (error instanceof z.ZodError) {
       const firstIssue = error.issues[0]
-      return NextResponse.json({ error: firstIssue?.message || "Please complete all contact form fields correctly." }, { status: 400 })
+      const errorCode = firstIssue && isContactErrorCode(firstIssue.message) ? firstIssue.message : "formInvalid"
+      return NextResponse.json({ errorCode }, { status: 400 })
     }
 
     console.error("Contact email failed:", error)
-    return NextResponse.json({ error: "Unable to send your message right now. Please try again later." }, { status: 500 })
+    if (error instanceof Error && /smtpclientauthentication is disabled|invalid login/i.test(error.message)) {
+      return NextResponse.json({ errorCode: "smtpAuthDisabled" satisfies ContactErrorCode }, { status: 500 })
+    }
+
+    return NextResponse.json({ errorCode: "sendFailed" satisfies ContactErrorCode }, { status: 500 })
   }
 }
 

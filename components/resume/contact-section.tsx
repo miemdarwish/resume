@@ -6,6 +6,30 @@ import { Linkedin, Mail, MapPin, Phone } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
 import { profile, profileLinks } from "@/lib/resume-data"
 
+const CONTACT_ERROR_CODES = [
+  "nameRequired",
+  "nameTooLong",
+  "emailInvalid",
+  "emailTooLong",
+  "subjectRequired",
+  "subjectTooLong",
+  "messageRequired",
+  "messageTooLong",
+  "recaptchaFailed",
+  "recaptchaLoadFailed",
+  "recaptchaNotConfigured",
+  "emailServiceNotConfigured",
+  "smtpAuthDisabled",
+  "sendFailed",
+  "formInvalid",
+] as const
+
+type ContactErrorCode = (typeof CONTACT_ERROR_CODES)[number]
+
+function isContactErrorCode(value: string): value is ContactErrorCode {
+  return CONTACT_ERROR_CODES.includes(value as ContactErrorCode)
+}
+
 type RecaptchaClient = {
   ready: (callback: () => void) => void
   execute: (siteKey: string, options: { action: string }) => Promise<string>
@@ -22,7 +46,7 @@ async function getRecaptchaToken(siteKey: string) {
 
   while (!window.grecaptcha) {
     if (Date.now() > timeoutAt) {
-      throw new Error("reCAPTCHA could not be loaded. Please refresh and try again.")
+      throw new Error("recaptchaLoadFailed")
     }
 
     await new Promise((resolve) => setTimeout(resolve, 100))
@@ -34,13 +58,13 @@ async function getRecaptchaToken(siteKey: string) {
         const token = await window.grecaptcha?.execute(siteKey, { action: "contact_form_submit" })
 
         if (!token) {
-          reject(new Error("reCAPTCHA verification failed. Please try again."))
+          reject(new Error("recaptchaFailed"))
           return
         }
 
         resolve(token)
       } catch {
-        reject(new Error("reCAPTCHA verification failed. Please try again."))
+        reject(new Error("recaptchaFailed"))
       }
     })
   })
@@ -86,6 +110,43 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
     subject: "",
     message: "",
   })
+
+  const getContactErrorMessage = (errorCode: ContactErrorCode) => {
+    switch (errorCode) {
+      case "nameRequired":
+        return t.contact.form.errors.nameRequired
+      case "nameTooLong":
+        return t.contact.form.errors.nameTooLong
+      case "emailInvalid":
+        return t.contact.form.errors.emailInvalid
+      case "emailTooLong":
+        return t.contact.form.errors.emailTooLong
+      case "subjectRequired":
+        return t.contact.form.errors.subjectRequired
+      case "subjectTooLong":
+        return t.contact.form.errors.subjectTooLong
+      case "messageRequired":
+        return t.contact.form.errors.messageRequired
+      case "messageTooLong":
+        return t.contact.form.errors.messageTooLong
+      case "recaptchaFailed":
+        return t.contact.form.errors.recaptchaFailed
+      case "recaptchaLoadFailed":
+        return t.contact.form.errors.recaptchaLoadFailed
+      case "recaptchaNotConfigured":
+        return t.contact.form.errors.recaptchaNotConfigured
+      case "emailServiceNotConfigured":
+        return t.contact.form.errors.emailServiceNotConfigured
+      case "smtpAuthDisabled":
+        return t.contact.form.errors.smtpAuthDisabled
+      case "sendFailed":
+        return t.contact.form.errors.sendFailed
+      case "formInvalid":
+        return t.contact.form.errors.formInvalid
+      default:
+        return t.contact.form.error
+    }
+  }
 
   useEffect(() => {
     if (isStaticSite || recaptchaSiteKey) {
@@ -146,7 +207,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
       const siteKey = recaptchaSiteKey || (await getRuntimeRecaptchaSiteKey())
 
       if (!siteKey) {
-        throw new Error("Security verification is not configured. Please try again later.")
+        throw new Error("recaptchaNotConfigured")
       }
 
       if (siteKey !== recaptchaSiteKey) {
@@ -166,10 +227,10 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
         }),
       })
 
-      const data = (await response.json()) as { ok?: boolean; error?: string }
+      const data = (await response.json()) as { ok?: boolean; error?: string; errorCode?: string }
 
       if (!response.ok) {
-        throw new Error(data.error || t.contact.form.error)
+        throw new Error(data.errorCode || data.error || "sendFailed")
       }
 
       setSubmitState({
@@ -179,7 +240,17 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
       submittedForm.reset()
       setFormData({ name: "", email: "", subject: "", message: "" })
     } catch (error) {
-      const message = error instanceof Error ? error.message : t.contact.form.error
+      let message: string = t.contact.form.error
+
+      if (error instanceof Error) {
+        const rawMessage = error.message.trim()
+        if (rawMessage && isContactErrorCode(rawMessage)) {
+          message = getContactErrorMessage(rawMessage)
+        } else if (rawMessage) {
+          message = rawMessage
+        }
+      }
+
       setSubmitState({
         type: "error",
         message,
@@ -304,15 +375,15 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
                 </button>
 
                 <p className="text-xs leading-relaxed text-primary-foreground/80">
-                  This site is protected by reCAPTCHA and the Google{" "}
+                  {t.contact.form.recaptchaNotice.prefix}{" "}
                   <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
-                    Privacy Policy
+                    {t.contact.form.recaptchaNotice.privacy}
                   </a>{" "}
-                  and{" "}
+                  {t.contact.form.recaptchaNotice.and}{" "}
                   <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
-                    Terms of Service
+                    {t.contact.form.recaptchaNotice.terms}
                   </a>{" "}
-                  apply.
+                  {t.contact.form.recaptchaNotice.suffix}
                 </p>
 
                 {submitState.type !== "idle" && (
