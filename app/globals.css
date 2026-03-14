@@ -106,3 +106,9 @@
     @apply overflow-x-hidden bg-background text-foreground;
   }
 }
+
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

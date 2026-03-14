@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ClarityInit } from '@/components/clarity-init'
 import { profile } from '@/lib/resume-data'
 import { withBasePath } from '@/lib/site'
 import './globals.css'
@@ -30,6 +31,7 @@ const quetine = localFont({
 })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim()
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim()
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined
 
 const seoTitle = 'Miriam Darwish | PMO Consultant Resume in Denmark'
@@ -46,6 +48,9 @@ export const metadata: Metadata = {
   metadataBase,
   title: seoTitle,
   description: seoDescription,
+  verification: {
+    google: googleSiteVerification,
+  },
   applicationName: `${profile.name} Resume`,
   authors: [{ name: profile.name }],
   creator: profile.name,
@@ -138,6 +143,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} ${quetine.variable} antialiased`}>
         {children}
+        <ClarityInit />
         <Analytics />
       </body>
     </html>

@@ -4,10 +4,20 @@ import { z } from "zod"
 import { profile } from "@/lib/resume-data"
 
 const contactSchema = z.object({
-  name: z.string().trim().min(2).max(120),
-  email: z.string().trim().email().max(160),
-  subject: z.string().trim().min(2).max(160),
-  message: z.string().trim().min(10).max(4000),
+  name: z.string().trim().min(1, "Please enter your name.").max(120, "Name is too long."),
+  email: z.string().trim().email("Please enter a valid email address.").max(160, "Email is too long."),
+  subject: z.string().trim().min(1, "Please enter a subject.").max(160, "Subject is too long."),
+  message: z.string().trim().min(1, "Please enter your message.").max(4000, "Message is too long."),
+  recaptchaToken: z
+    .string({ required_error: "reCAPTCHA verification failed. Please try again." })
+    .trim()
+    .min(1, "reCAPTCHA verification failed. Please try again."),
+})
+
+const recaptchaVerificationSchema = z.object({
+  success: z.boolean(),
+  score: z.number().optional(),
+  action: z.string().optional(),
 })
 
 export async function POST(request: Request) {
@@ -16,6 +26,7 @@ export async function POST(request: Request) {
   const smtpUser = process.env.SMTP_USER?.trim()
   const smtpPass = process.env.SMTP_PASS?.trim()
   const contactTo = process.env.CONTACT_TO?.trim() || smtpUser
+  const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY?.trim()
 
   if (!smtpUser || !smtpPass || !contactTo) {
     return NextResponse.json(
@@ -24,8 +35,17 @@ export async function POST(request: Request) {
     )
   }
 
+  if (!recaptchaSecret) {
+    return NextResponse.json({ error: "Spam protection is not configured. Add RECAPTCHA_SECRET_KEY in .env." }, { status: 500 })
+  }
+
   try {
     const payload = contactSchema.parse(await request.json())
+    const isRecaptchaValid = await verifyRecaptchaToken(payload.recaptchaToken, recaptchaSecret)
+
+    if (!isRecaptchaValid) {
+      return NextResponse.json({ error: "reCAPTCHA verification failed. Please try again." }, { status: 400 })
+    }
 
     const transporter = nodemailer.createTransport({
       host: smtpHost,
@@ -61,7 +81,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true })
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return NextResponse.json({ error: "Please complete all contact form fields correctly." }, { status: 400 })
+      const firstIssue = error.issues[0]
+      return NextResponse.json({ error: firstIssue?.message || "Please complete all contact form fields correctly." }, { status: 400 })
     }
 
     console.error("Contact email failed:", error)
@@ -76,4 +97,41 @@ function escapeHtml(value: string) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;")
+}
+
+async function verifyRecaptchaToken(token: string, secret: string) {
+  const body = new URLSearchParams({
+    secret,
+    response: token,
+  })
+
+  try {
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: body.toString(),
+      cache: "no-store",
+    })
+
+    if (!response.ok) {
+      return false
+    }
+
+    const verification = recaptchaVerificationSchema.safeParse(await response.json())
+
+    if (!verification.success) {
+      return false
+    }
+
+    return (
+      verification.data.success &&
+      verification.data.action === "contact_form_submit" &&
+      typeof verification.data.score === "number" &&
+      verification.data.score >= 0.5
+    )
+  } catch {
+    return false
+  }
 }
