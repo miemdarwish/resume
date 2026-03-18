@@ -297,7 +297,7 @@ export const translations = {
       yearsOfExperience: nlExperienceLabel,
       tagline: `PMO | Project Coordinator | ${nlExperienceLabel}`,
       summary:
-        `Ik ben een resultaatgerichte PMO Consultant met ${nlExperienceOverPhrase} in complexe, internationale projecten. Ik werk sterk in risicobeheer, governance, mijlpaalbewaking en stakeholdercommunicatie.`,
+        `PMO Consultant met ${nlExperienceOverPhrase} in de ondersteuning van complexe, wereldwijde projecten binnen dynamische omgevingen. Ervaren in risicomanagement, governance, mijlpaalbewaking en stakeholdercoordinatie.`,
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "E-mail",
@@ -305,9 +305,9 @@ export const translations = {
     services: {
       title: "Expertisegebieden",
       intro:
-        "Een sterk PMO-profiel met focus op structuur, duidelijke communicatie en betrouwbare ondersteuning van projecten.",
+        "PMO-profiel gericht op gestructureerde projectondersteuning, heldere communicatie met stakeholders en betrouwbare leveringscoordinatie.",
       body1:
-        "Mijn ervaring draait om praktische PMO-ondersteuning, heldere rapportages, goede afstemming tussen teams, risicoinzicht en consistente governance in internationale projectomgevingen.",
+        "Het CV richt zich op hands-on PMO-ondersteuning, sterke rapportagediscipline, cross-functionele coordinatie, risicoinzicht en governance-opvolging binnen internationale projectomgevingen.",
       body2: "Ik werk onder andere met Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P en ServiceNow.",
       ctaDownload: "Download CV",
       ctaExperience: "Bekijk Ervaring",
@@ -551,7 +551,7 @@ export const translations = {
       yearsOfExperience: daExperienceLabel,
       tagline: `PMO | Projektkoordinator | ${daExperienceLabel}`,
       summary:
-        `Jeg er en resultatorienteret PMO-konsulent med ${daExperienceOverPhrase} fra komplekse, internationale projekter. Jeg arbejder staerkt med risikostyring, governance, milepaelsopfolgning og interessentkommunikation.`,
+        `PMO-konsulent med ${daExperienceOverPhrase} i stotte til komplekse, globale projekter i dynamiske miljoer. Kompetent inden for risikostyring, governance, milepaelsopfolgning og interessentkoordinering.`,
       downloadCV: "Download CV",
       linkedIn: "LinkedIn",
       email: "E-mail",
@@ -559,9 +559,9 @@ export const translations = {
     services: {
       title: "Kompetenceomrader",
       intro:
-        "En staerk PMO-profil med fokus pa struktur, klar kommunikation og stabil projektstotte.",
+        "PMO-profil med fokus pa struktureret projektstotte, klar interessentkommunikation og palidelig leveringskoordinering.",
       body1:
-        "Min erfaring handler om praktisk PMO-stotte, tydelig rapportering, godt samarbejde pa tvaers af teams, risikotransparens og stabil governance i internationale projektmiljoer.",
+        "CV'et fokuserer pa praktisk PMO-stotte, staerk rapporteringsdisciplin, tvaergaende koordinering, risikosynlighed og governance-opfoelgning i internationale projektmiljoer.",
       body2: "Jeg arbejder blandt andet med Microsoft Office, Confluence, SharePoint, MS Project, Jira, Oracle P2P og ServiceNow.",
       ctaDownload: "Download CV",
       ctaExperience: "Se Erfaring",
