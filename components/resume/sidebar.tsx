@@ -6,6 +6,7 @@ import { useTranslations } from "@/lib/i18n/context"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SidebarSearch } from "@/components/resume/sidebar-search"
 import { profile, profileLinks, totalPages } from "@/lib/resume-data"
+import { HIDE_CONTACT_DETAILS } from "@/lib/site"
 
 const navItems = ["home", "services", "resume", "skills", "contact"] as const
 
@@ -86,6 +87,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
                     </a>
                   </div>
                 </div>
+                {!HIDE_CONTACT_DETAILS && (
                 <div className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 flex-none text-sidebar-foreground/70" />
                   <div className="min-w-0">
@@ -95,6 +97,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
                     </a>
                   </div>
                 </div>
+                )}
               </div>
             </div>
 
@@ -179,6 +182,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
             </nav>
 
             <div className="mt-12 space-y-6 text-sidebar-foreground">
+              {!HIDE_CONTACT_DETAILS && (
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5" />
                 <div>
@@ -186,6 +190,8 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
                   <p className="font-medium text-sidebar-foreground">{profile.location}</p>
                 </div>
               </div>
+              )}
+              {!HIDE_CONTACT_DETAILS && (
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5" />
                 <div>
@@ -195,6 +201,7 @@ export function Sidebar({ activeSection, currentPage, onNavClick }: SidebarProps
                   </a>
                 </div>
               </div>
+              )}
               <div className="min-w-0 flex items-start gap-3">
                 <Mail className="h-5 w-5" />
                 <div className="min-w-0">

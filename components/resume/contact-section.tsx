@@ -5,6 +5,7 @@ import Script from "next/script"
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react"
 import { useTranslations } from "@/lib/i18n/context"
 import { profile, profileLinks } from "@/lib/resume-data"
+import { HIDE_CONTACT_DETAILS } from "@/lib/site"
 
 const CONTACT_ERROR_CODES = [
   "nameRequired",
@@ -277,6 +278,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
               <p className="mb-8 text-base leading-relaxed text-foreground/80 sm:text-lg">{t.contact.description}</p>
 
               <div className="space-y-4">
+                {!HIDE_CONTACT_DETAILS && (
                 <div className="flex items-start gap-4">
                   <MapPin className="h-5 w-5 text-primary" />
                   <div>
@@ -284,6 +286,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
                     <p className="text-foreground">{profile.location}</p>
                   </div>
                 </div>
+                )}
                 <div className="flex items-start gap-4">
                   <Mail className="h-5 w-5 text-primary" />
                   <div className="min-w-0">
@@ -293,6 +296,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
                     </a>
                   </div>
                 </div>
+                {!HIDE_CONTACT_DETAILS && (
                 <div className="flex items-start gap-4">
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
@@ -302,6 +306,7 @@ export function ContactSection({ currentPage = 6 }: ContactSectionProps) {
                     </a>
                   </div>
                 </div>
+                )}
                 <div className="flex items-start gap-4">
                   <Linkedin className="h-5 w-5 text-primary" />
                   <div className="min-w-0">

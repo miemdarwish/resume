@@ -5,7 +5,8 @@ import { Analytics } from '@vercel/analytics/next'
 import { ClarityInit } from '@/components/clarity-init'
 import { getExperienceYearsPlus } from '@/lib/experience'
 import { profile } from '@/lib/resume-data'
-import { withBasePath } from '@/lib/site'
+import { withBasePath, MAINTENANCE_MODE } from '@/lib/site'
+import { MaintenancePage } from '@/components/resume/maintenance-page'
 import './globals.css'
 
 const poppins = Poppins({
@@ -144,9 +145,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} ${quetine.variable} antialiased`}>
-        {children}
-        <ClarityInit />
-        <Analytics />
+        {MAINTENANCE_MODE ? <MaintenancePage /> : children}
+        {!MAINTENANCE_MODE && <ClarityInit />}
+        {!MAINTENANCE_MODE && <Analytics />}
       </body>
     </html>
   )
