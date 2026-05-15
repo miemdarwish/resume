@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { ClarityInit } from '@/components/clarity-init'
 import { getExperienceYearsPlus } from '@/lib/experience'
 import { profile } from '@/lib/resume-data'
-import { withBasePath, MAINTENANCE_MODE } from '@/lib/site'
+import { withBasePath, MAINTENANCE_MODE, HIDE_CONTACT_DETAILS } from '@/lib/site'
 import { MaintenancePage } from '@/components/resume/maintenance-page'
 import './globals.css'
 
@@ -37,9 +37,12 @@ const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined
 const experienceYearsPlus = getExperienceYearsPlus()
 
-const seoTitle = 'Miriam Darwish | PMO Consultant Resume in Denmark'
-const seoDescription =
-  `Explore Miriam Darwish's resume: PMO consultant with ${experienceYearsPlus} years in project coordination, governance, risk management and stakeholder support in Denmark.`
+const seoTitle = HIDE_CONTACT_DETAILS
+  ? 'Miriam Darwish | PMO Consultant Resume'
+  : 'Miriam Darwish | PMO Consultant Resume in Denmark'
+const seoDescription = HIDE_CONTACT_DETAILS
+  ? `Explore Miriam Darwish's resume: PMO consultant with ${experienceYearsPlus} years in project coordination, governance, risk management and stakeholder support.`
+  : `Explore Miriam Darwish's resume: PMO consultant with ${experienceYearsPlus} years in project coordination, governance, risk management and stakeholder support in Denmark.`
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -64,7 +67,7 @@ export const metadata: Metadata = {
     'project coordinator',
     'resume',
     'CV',
-    'Denmark',
+    ...(HIDE_CONTACT_DETAILS ? [] : ['Denmark']),
     'project governance',
     'risk management',
     'stakeholder management',
